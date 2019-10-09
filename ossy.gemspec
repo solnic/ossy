@@ -28,6 +28,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency 'bundler', '~> 2.0'
   spec.add_development_dependency 'dry-system', '~> 0.12'
+  spec.add_development_dependency 'hanami-cli', '~> 0.3'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rom-http', '~> 0.8'
   spec.add_development_dependency 'rspec', '~> 3.9'

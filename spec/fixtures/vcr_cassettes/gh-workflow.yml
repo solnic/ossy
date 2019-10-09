@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.github.com/repos/dry-rb/dry-rb.org/dispatches
+    body:
+      encoding: UTF-8
+      string: '{"event_type":"ci"}'
+    headers:
+      Accept:
+      - application/vnd.github.everest-preview+json
+      Authorization:
+      - Basic c29sbmljOjM5M2M2MDhhNTMyN2FkZWZkYjA3OGUzMzQ5MDgwYWYxMDBhMGUyZGE=
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=UTF-8
+      Host:
+      - api.github.com
+      User-Agent:
+      - http.rb/4.1.1
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Date:
+      - Wed, 09 Oct 2019 10:12:11 GMT
+      Connection:
+      - close
+      Server:
+      - GitHub.com
+      Status:
+      - 204 No Content
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4996'
+      X-Ratelimit-Reset:
+      - '1570619473'
+      X-Oauth-Scopes:
+      - repo
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Github-Media-Type:
+      - github.everest-preview; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      Vary:
+      - Accept-Encoding
+      X-Github-Request-Id:
+      - FF31:3B391:D57FB0A:102D37A1:5D9DB27A
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    http_version: 
+  recorded_at: Wed, 09 Oct 2019 10:12:06 GMT
+recorded_with: VCR 5.0.0

@@ -4,3 +4,7 @@ source "https://rubygems.org"
 gemspec
 
 gem 'byebug'
+
+group :test do
+  gem 'vcr', '~> 5.0'
+end

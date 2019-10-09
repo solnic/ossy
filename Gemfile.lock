@@ -89,6 +89,7 @@ GEM
       rspec-support (~> 3.9.0)
     rspec-support (3.9.0)
     transproc (1.1.0)
+    vcr (5.0.0)
 
 PLATFORMS
   ruby
@@ -102,6 +103,7 @@ DEPENDENCIES
   rake (~> 10.0)
   rom-http (~> 0.8)
   rspec (~> 3.9)
+  vcr (~> 5.0)
 
 BUNDLED WITH
    2.0.1

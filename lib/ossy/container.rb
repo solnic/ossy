@@ -3,6 +3,7 @@
 require 'dry/types'
 require 'dry/system/container'
 require 'dry/system/components'
+require 'byebug'
 
 module Ossy
   class Container < Dry::System::Container
@@ -14,6 +15,7 @@ module Ossy
     use :env, inferrer: proc { ENV.fetch('OSSY_ENV') { 'development' }.to_sym }
 
     configure do |config|
+      config.root = Pathname(__dir__).join('../../')
       config.name = :ossy
       config.default_namespace = 'ossy'
     end

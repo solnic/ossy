@@ -14,7 +14,7 @@ module Ossy
         option(:branch, required: false, desc: 'Branch name', default: 'master')
 
         def call(repo:, file:, branch:)
-          url = "https://raw.githubusercontent.com/#{repo}/#{branch}/#{file}"
+          url = "https://raw.githubusercontent.com/#{repo}/#{branch}/shared/#{file}"
 
           content = open(url).read
 

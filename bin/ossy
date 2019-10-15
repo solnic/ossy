@@ -4,6 +4,5 @@
 
 require 'bundler/setup'
 require 'ossy/cli'
-require 'byebug'
 
 Ossy::CLI::Application.start

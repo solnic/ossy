@@ -3,7 +3,6 @@
 require 'dry/types'
 require 'dry/system/container'
 require 'dry/system/components'
-require 'byebug'
 
 module Ossy
   class Container < Dry::System::Container

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'ossy/github/workflow'
 
 RSpec.describe Ossy::Github::Workflow, '#call' do

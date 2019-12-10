@@ -2,7 +2,7 @@
 
 require 'ossy/import'
 
-require 'http'
+require 'net/http'
 
 module Ossy
   module Github
@@ -11,26 +11,38 @@ module Ossy
 
       BASE_URL = 'https://api.github.com'
 
+      METHODS = {
+        get: Net::HTTP::Get,
+        post: Net::HTTP::Post,
+        put: Net::HTTP::Put,
+        patch: Net::HTTP::Patch,
+        delete: Net::HTTP::Delete
+      }
+
       def call(repo, name)
         post("repos/#{repo}/dispatches", event_type: name)
       end
 
       def request(meth, path, opts = {})
-        http.public_send(meth, url(path), opts)
+        request = METHODS.fetch(meth).new(uri(path))
+
+        request['Accept'] = 'application/vnd.github.everest-preview+json'
+        request.basic_auth(settings.github_login, settings.github_token)
+        request.set_form_data(opts) unless opts.empty?
+
+        http.request(request)
+      end
+
+      def uri(path)
+        URI("#{BASE_URL}/#{path}")
       end
 
       def post(path, input)
         request(:post, path, json: input)
       end
 
-      def url(path)
-        "#{BASE_URL}/#{path}"
-      end
-
       def http
-        HTTP
-          .headers('Accept': 'application/vnd.github.everest-preview+json')
-          .basic_auth(user: settings.github_login, pass: settings.github_token)
+        Net::HTTP.new(BASE_URL)
       end
     end
   end

@@ -27,7 +27,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_runtime_dependency 'dry-system', '~> 0.12'
-  spec.add_runtime_dependency 'hanami-cli', '~> 0.3'
+  spec.add_runtime_dependency 'dry-cli', '~> 0.5'
   spec.add_runtime_dependency 'http', '~> 4.1'
 
   spec.add_development_dependency 'bundler', '~> 2.0'

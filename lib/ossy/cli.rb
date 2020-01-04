@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require 'hanami/cli'
+require 'dry/cli'
 require 'ossy/cli/commands'
 
 module Ossy
   module CLI
-    class Application < Hanami::CLI
+    class Application < Dry::CLI
       def self.start
         new.()
       end

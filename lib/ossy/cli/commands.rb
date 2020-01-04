@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require 'hanami/cli/registry'
+require 'dry/cli/registry'
 
 module Ossy
   module CLI
     module Commands
-      extend Hanami::CLI::Registry
+      extend Dry::CLI::Registry
 
       require 'ossy/cli/github/workflow'
       require 'ossy/cli/github/update_file'

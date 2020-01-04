@@ -5,6 +5,7 @@ PATH
       dry-cli (~> 0.5)
       dry-system (~> 0.12)
       http (~> 4.1)
+      tilt (~> 2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -89,6 +90,7 @@ GEM
       rspec-support (~> 3.9.0)
     rspec-support (3.9.0)
     safe_yaml (1.0.5)
+    tilt (2.0.10)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.6)

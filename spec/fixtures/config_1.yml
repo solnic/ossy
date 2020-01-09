@@ -1,0 +1,5 @@
+test:
+  text: 'Hello World'
+  nums: [1, 2]
+  data:
+    foo: 'bar'

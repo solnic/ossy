@@ -1,0 +1,5 @@
+test:
+  text: 'Hello Universe'
+  nums: [1, 2, 3, 4]
+  data:
+    bar: 'baz'

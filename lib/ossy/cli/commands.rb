@@ -10,6 +10,8 @@ module Ossy
       require 'ossy/cli/github/workflow'
       require 'ossy/cli/github/update_file'
 
+      require 'ossy/cli/configs/merge'
+
       require 'ossy/cli/templates/compile'
 
       register 'github', aliases: %w[gh] do |github|
@@ -17,8 +19,12 @@ module Ossy
         github.register 'update_file', Github::UpdateFile, aliases: %w[uf]
       end
 
-      register 'templates', aliases: %w[t] do |github|
-        github.register 'compile', Templates::Compile, aliases: %w[c]
+      register 'templates', aliases: %w[t] do |templates|
+        templates.register 'compile', Templates::Compile, aliases: %w[c]
+      end
+
+      register 'configs', aliases: %w[c] do |configs|
+        configs.register 'merge', Configs::Merge, aliases: %w[m]
       end
     end
   end

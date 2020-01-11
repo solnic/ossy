@@ -14,7 +14,9 @@ module Ossy
     module Templates
       class Compile < Commands::Core
         class Context < OpenStruct
-          Inflector = Dry::Inflector.new
+          Inflector = Dry::Inflector.new do |i|
+            i.acronym 'CLI'
+          end
 
           def inflector
             Inflector

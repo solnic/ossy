@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'dry/inflector'
 require 'ossy/cli/commands/core'
 require 'ossy/import'
 
@@ -12,6 +13,14 @@ module Ossy
   module CLI
     module Templates
       class Compile < Commands::Core
+        class Context < OpenStruct
+          Inflector = Dry::Inflector.new
+
+          def inflector
+            Inflector
+          end
+        end
+
         include Import['github.workflow']
 
         desc 'Compile an erb template'
@@ -25,7 +34,7 @@ module Ossy
 
           data = YAML.load_file(data_file)
           template = Tilt.new(source_path)
-          output = template.render(OpenStruct.new(data))
+          output = template.render(Context.new(data))
 
           File.write(target_path, output)
         end

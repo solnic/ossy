@@ -3,6 +3,7 @@ PATH
   specs:
     ossy (0.0.1)
       dry-cli (~> 0.5)
+      dry-inflector (~> 0.1, >= 0.1.2)
       dry-system (~> 0.12)
       http (~> 4.1)
       tilt (~> 2.0)
@@ -113,4 +114,4 @@ DEPENDENCIES
   webmock (~> 3.7)
 
 BUNDLED WITH
-   2.1.2
+   2.1.4

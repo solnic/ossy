@@ -1,0 +1,32 @@
+<% releases.each do |r| %>
+## <%= r.version %> <%= r.date %>
+
+<% if r.summary %>
+<%= r.summary %>
+
+<% end %>
+
+<% if r.added? %>
+### Added
+
+<% r.added.each do |log| %>
+- <%= log %>
+<% end %>
+
+<% end %>
+<% if r.fixed? %>
+### Fixed
+
+<% r.fixed.each do |log| %>
+- <%= log %>
+<% end %>
+
+<% end %>
+<% if r.changed? %>
+### Changed
+
+<% r.changed.each do |log| %>
+- <%= log %>
+<% end %>
+<% end %>
+<% end %>

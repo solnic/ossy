@@ -28,6 +28,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'dry-inflector', '~> 0.1', '>= 0.1.2'
   spec.add_runtime_dependency 'dry-cli', '~> 0.5'
+  spec.add_runtime_dependency 'dry-struct', '~> 1.2'
   spec.add_runtime_dependency 'dry-system', '~> 0.12'
   spec.add_runtime_dependency 'http', '~> 4.1'
   spec.add_runtime_dependency 'tilt', '~> 2.0'

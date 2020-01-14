@@ -1,15 +1,12 @@
 # frozen_string_literal: true
 
-require 'dry/types'
 require 'dry/system/container'
 require 'dry/system/components'
 
+require 'ossy/types'
+
 module Ossy
   class Container < Dry::System::Container
-    module Types
-      include Dry.Types
-    end
-
     use :logging
     use :env, inferrer: proc { ENV.fetch('OSSY_ENV') { 'development' }.to_sym }
 

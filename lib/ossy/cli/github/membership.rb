@@ -15,10 +15,16 @@ module Ossy
         argument :org, required: true, desc: 'The name of the org'
         argument :team, required: true, desc: 'The name of the team'
 
-        def call(username:, org:, team:)
-          puts "Checking #{username} in #{org}/@#{team}"
+        option :verify, required: false
 
-          exit(1) unless client.membership?(username, org: org, team: team)
+        def call(username:, org:, team:, verify: 'false')
+          result = client.membership?(username, org: org, team: team)
+
+          if verify.eql?('true')
+            exit(1) unless result
+          else
+            puts "#{username} has active membership in #{org}/@#{team}"
+          end
         end
       end
     end

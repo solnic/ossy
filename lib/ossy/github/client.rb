@@ -23,6 +23,17 @@ module Ossy
         json['state'].eql?('active')
       end
 
+      def tagger(repo:, tag_sha:)
+        path = "repos/#{repo}/git/tags/#{tag_sha}"
+        resp = get(path)
+
+        return false unless resp.code.equal?(200)
+
+        json = JSON.parse(resp.body)
+
+        { tagger: json['tagger'], verified: json['verification']['verified'] }
+      end
+
       def request(meth, path, opts = {})
         http.public_send(meth, url(path), opts)
       end

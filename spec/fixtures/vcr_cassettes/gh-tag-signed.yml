@@ -1,0 +1,88 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/repos/dry-rb/dry-validation/git/tags/f06331a3eac30005f4dbbe3976b6fa7292f56498
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.everest-preview+json
+      Connection:
+      - close
+      Host:
+      - api.github.com
+      User-Agent:
+      - http.rb/4.3.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 20 Jan 2020 22:13:36 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1803'
+      Connection:
+      - close
+      Server:
+      - GitHub.com
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4996'
+      X-Ratelimit-Reset:
+      - '1579561795'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      Etag:
+      - '"fccebc2a5050aab3d5312b36bf060e40"'
+      Last-Modified:
+      - Mon, 20 Jan 2020 21:44:12 GMT
+      X-Oauth-Scopes:
+      - repo
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Github-Media-Type:
+      - github.everest-preview; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Github-Request-Id:
+      - CB04:27157:1234F7:1633BF:5E262610
+    body:
+      encoding: UTF-8
+      string: '{"node_id":"MDM6VGFnMzk1MzI2MzE6ZjA2MzMxYTNlYWMzMDAwNWY0ZGJiZTM5NzZiNmZhNzI5MmY1NjQ5OA==","sha":"f06331a3eac30005f4dbbe3976b6fa7292f56498","url":"https://api.github.com/repos/dry-rb/dry-validation/git/tags/f06331a3eac30005f4dbbe3976b6fa7292f56498","tagger":{"name":"Piotr
+        Solnica","email":"piotr.solnica@gmail.com","date":"2019-07-08T20:35:08Z"},"object":{"sha":"79430c45a80baf787d1a47bb88471d77419bf0d1","type":"commit","url":"https://api.github.com/repos/dry-rb/dry-validation/git/commits/79430c45a80baf787d1a47bb88471d77419bf0d1"},"tag":"v1.2.0","message":"tag
+        v1.2.0\n-----BEGIN PGP SIGNATURE-----\n\niQEzBAABCAAdFiEEetvAigLDgIifsH23Zr8v2nug8pwFAl0jqPwACgkQZr8v2nug\n8pzDZwf9FrenS0jEGyM4eACLL/7AVylKUSjXKym5LjzyG9Lf0goI31xz1fC+ngKA\naIqsoMcRzkTHlDC+dfyYmYNOnSaMgj/9xQZjusG6TrOtSo8DfnfJZPebi2z/C5GY\nsJOsa4sYZoHoLkDud9OmzdjrnhrhSpgwqeRlMm+n0ToMC88crri1ZgePXiAwkknp\noMS16Iqi0850HGEddIpPq4Z6IcqH2/lZtcDrW7iqI6nbIgyC2FRz9oGEBSi7FzMj\nrSR5qwZzvuGOdSj45+kG4YTZTbfbm9Bt93waqEtP6SlDVMR4ATv+8ruJvP3GWHsO\n9Cx6GBDLamx3ML+AFBTMR9rbWbgmVg==\n=33Rb\n-----END
+        PGP SIGNATURE-----\n","verification":{"verified":true,"reason":"valid","signature":"-----BEGIN
+        PGP SIGNATURE-----\n\niQEzBAABCAAdFiEEetvAigLDgIifsH23Zr8v2nug8pwFAl0jqPwACgkQZr8v2nug\n8pzDZwf9FrenS0jEGyM4eACLL/7AVylKUSjXKym5LjzyG9Lf0goI31xz1fC+ngKA\naIqsoMcRzkTHlDC+dfyYmYNOnSaMgj/9xQZjusG6TrOtSo8DfnfJZPebi2z/C5GY\nsJOsa4sYZoHoLkDud9OmzdjrnhrhSpgwqeRlMm+n0ToMC88crri1ZgePXiAwkknp\noMS16Iqi0850HGEddIpPq4Z6IcqH2/lZtcDrW7iqI6nbIgyC2FRz9oGEBSi7FzMj\nrSR5qwZzvuGOdSj45+kG4YTZTbfbm9Bt93waqEtP6SlDVMR4ATv+8ruJvP3GWHsO\n9Cx6GBDLamx3ML+AFBTMR9rbWbgmVg==\n=33Rb\n-----END
+        PGP SIGNATURE-----\n","payload":"object 79430c45a80baf787d1a47bb88471d77419bf0d1\ntype
+        commit\ntag v1.2.0\ntagger Piotr Solnica <piotr.solnica@gmail.com> 1562618108
+        +0200\n\ntag v1.2.0\n"}}'
+    http_version: 
+  recorded_at: Mon, 20 Jan 2020 22:13:36 GMT
+recorded_with: VCR 5.0.0

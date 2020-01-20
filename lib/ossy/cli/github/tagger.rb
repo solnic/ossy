@@ -12,10 +12,10 @@ module Ossy
         desc 'Return tagger email for a verified tag'
 
         argument :repo, required: true, desc: 'The repo'
-        argument :tag_sha, required: true, desc: 'The tag sha'
+        argument :tag, required: true, desc: 'The tag name'
 
-        def call(repo:, tag_sha:)
-          result = client.tagger(repo: repo, tag_sha: tag_sha)
+        def call(repo:, tag:)
+          result = client.tagger(repo: repo, tag: tag)
 
           if result && result[:verified].equal?(true)
             puts result[:tagger]['email']

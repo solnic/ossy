@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
   spec.files = Dir['CHANGELOG.md', 'LICENSE', 'README.md', 'lib/**/*', 'bin/ossy']
   spec.test_files = spec.files.grep(%r{^(test|spec|features)/})
   spec.bindir        = 'bin'
-  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  spec.executables   = 'ossy'
   spec.require_paths = ['lib']
 
   spec.add_runtime_dependency 'dry-inflector', '~> 0.1', '>= 0.1.2'

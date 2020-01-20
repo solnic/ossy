@@ -9,6 +9,7 @@ module Ossy
 
       require 'ossy/cli/github/workflow'
       require 'ossy/cli/github/membership'
+      require 'ossy/cli/github/tagger'
       require 'ossy/cli/github/update_file'
 
       require 'ossy/cli/changelogs/generate'
@@ -21,6 +22,7 @@ module Ossy
       register 'github', aliases: %w[gh] do |github|
         github.register 'workflow', Github::Workflow, aliases: %w[w]
         github.register 'membership', Github::Membership, aliases: %w[m]
+        github.register 'tagger', Github::Tagger, aliases: %w[t]
         github.register 'update_file', Github::UpdateFile, aliases: %w[uf]
       end
 

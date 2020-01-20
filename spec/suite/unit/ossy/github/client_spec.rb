@@ -23,20 +23,14 @@ RSpec.describe Ossy::Github::Client do
 
   describe '#tagger' do
     it 'returns tagger and verification status set to true', vcr: true, cassette: 'gh-tag-signed' do
-      result = client.tagger(
-        repo: 'dry-rb/dry-validation',
-        tag_sha: 'f06331a3eac30005f4dbbe3976b6fa7292f56498'
-      )
+      result = client.tagger(repo: 'dry-rb/dry-validation', tag: 'v1.2.0')
 
       expect(result[:tagger]).to_not be_empty
       expect(result[:verified]).to be(true)
     end
 
     it 'returns tagger and verification status set to false', vcr: true, cassette: 'gh-tag-not-signed' do
-      result = client.tagger(
-        repo: 'dry-rb/dry-validation',
-        tag_sha: '1158cfbcfa66a526ea4460cc7cfa340b6cd75997'
-      )
+      result = client.tagger( repo: 'dry-rb/dry-validation', tag: 'v1.0.0')
 
       expect(result[:tagger]).to_not be_empty
       expect(result[:verified]).to be(false)

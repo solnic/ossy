@@ -2,6 +2,86 @@
 http_interactions:
 - request:
     method: get
+    uri: https://api.github.com/repos/dry-rb/dry-validation/git/ref/tags/v1.2.0
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.everest-preview+json
+      Connection:
+      - close
+      Host:
+      - api.github.com
+      User-Agent:
+      - http.rb/4.3.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 20 Jan 2020 22:26:54 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '329'
+      Connection:
+      - close
+      Server:
+      - GitHub.com
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4986'
+      X-Ratelimit-Reset:
+      - '1579561794'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      Etag:
+      - '"886f7bff8e11cb2979d14e5b60d0d640"'
+      Last-Modified:
+      - Mon, 20 Jan 2020 21:44:12 GMT
+      X-Poll-Interval:
+      - '300'
+      X-Oauth-Scopes:
+      - repo
+      X-Accepted-Oauth-Scopes:
+      - repo
+      X-Github-Media-Type:
+      - github.everest-preview; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Github-Request-Id:
+      - CB89:20DA5:D73F3:102340:5E26292E
+    body:
+      encoding: UTF-8
+      string: '{"ref":"refs/tags/v1.2.0","node_id":"MDM6UmVmMzk1MzI2MzE6djEuMi4w","url":"https://api.github.com/repos/dry-rb/dry-validation/git/refs/tags/v1.2.0","object":{"sha":"f06331a3eac30005f4dbbe3976b6fa7292f56498","type":"tag","url":"https://api.github.com/repos/dry-rb/dry-validation/git/tags/f06331a3eac30005f4dbbe3976b6fa7292f56498"}}'
+    http_version: 
+  recorded_at: Mon, 20 Jan 2020 22:26:54 GMT
+- request:
+    method: get
     uri: https://api.github.com/repos/dry-rb/dry-validation/git/tags/f06331a3eac30005f4dbbe3976b6fa7292f56498
     body:
       encoding: UTF-8
@@ -21,7 +101,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 20 Jan 2020 22:13:36 GMT
+      - Mon, 20 Jan 2020 22:26:55 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -35,7 +115,7 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4996'
+      - '4985'
       X-Ratelimit-Reset:
       - '1579561795'
       Cache-Control:
@@ -72,7 +152,7 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - CB04:27157:1234F7:1633BF:5E262610
+      - CB8A:27157:1750D2:1C5249:5E26292E
     body:
       encoding: UTF-8
       string: '{"node_id":"MDM6VGFnMzk1MzI2MzE6ZjA2MzMxYTNlYWMzMDAwNWY0ZGJiZTM5NzZiNmZhNzI5MmY1NjQ5OA==","sha":"f06331a3eac30005f4dbbe3976b6fa7292f56498","url":"https://api.github.com/repos/dry-rb/dry-validation/git/tags/f06331a3eac30005f4dbbe3976b6fa7292f56498","tagger":{"name":"Piotr
@@ -84,5 +164,5 @@ http_interactions:
         commit\ntag v1.2.0\ntagger Piotr Solnica <piotr.solnica@gmail.com> 1562618108
         +0200\n\ntag v1.2.0\n"}}'
     http_version: 
-  recorded_at: Mon, 20 Jan 2020 22:13:36 GMT
+  recorded_at: Mon, 20 Jan 2020 22:26:55 GMT
 recorded_with: VCR 5.0.0

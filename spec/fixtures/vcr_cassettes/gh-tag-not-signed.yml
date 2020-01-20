@@ -2,6 +2,86 @@
 http_interactions:
 - request:
     method: get
+    uri: https://api.github.com/repos/dry-rb/dry-validation/git/ref/tags/v1.0.0
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.everest-preview+json
+      Connection:
+      - close
+      Host:
+      - api.github.com
+      User-Agent:
+      - http.rb/4.3.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 20 Jan 2020 22:26:49 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '329'
+      Connection:
+      - close
+      Server:
+      - GitHub.com
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4988'
+      X-Ratelimit-Reset:
+      - '1579561795'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      Etag:
+      - '"9a41a87c1d681ef54e0a0ab1bb1cafa6"'
+      Last-Modified:
+      - Mon, 20 Jan 2020 21:44:12 GMT
+      X-Poll-Interval:
+      - '300'
+      X-Oauth-Scopes:
+      - repo
+      X-Accepted-Oauth-Scopes:
+      - repo
+      X-Github-Media-Type:
+      - github.everest-preview; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Github-Request-Id:
+      - CB87:27153:124616:1617A3:5E262928
+    body:
+      encoding: UTF-8
+      string: '{"ref":"refs/tags/v1.0.0","node_id":"MDM6UmVmMzk1MzI2MzE6djEuMC4w","url":"https://api.github.com/repos/dry-rb/dry-validation/git/refs/tags/v1.0.0","object":{"sha":"1158cfbcfa66a526ea4460cc7cfa340b6cd75997","type":"tag","url":"https://api.github.com/repos/dry-rb/dry-validation/git/tags/1158cfbcfa66a526ea4460cc7cfa340b6cd75997"}}'
+    http_version: 
+  recorded_at: Mon, 20 Jan 2020 22:26:49 GMT
+- request:
+    method: get
     uri: https://api.github.com/repos/dry-rb/dry-validation/git/tags/1158cfbcfa66a526ea4460cc7cfa340b6cd75997
     body:
       encoding: UTF-8
@@ -21,7 +101,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 20 Jan 2020 22:13:32 GMT
+      - Mon, 20 Jan 2020 22:26:49 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -35,7 +115,7 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4997'
+      - '4987'
       X-Ratelimit-Reset:
       - '1579561794'
       Cache-Control:
@@ -72,12 +152,12 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - CB03:F8D2:8C3C8:AA826:5E26260B
+      - CB88:1A476:187E1E:1D8BBE:5E262929
     body:
       encoding: UTF-8
       string: '{"node_id":"MDM6VGFnMzk1MzI2MzE6MTE1OGNmYmNmYTY2YTUyNmVhNDQ2MGNjN2NmYTM0MGI2Y2Q3NTk5Nw==","sha":"1158cfbcfa66a526ea4460cc7cfa340b6cd75997","url":"https://api.github.com/repos/dry-rb/dry-validation/git/tags/1158cfbcfa66a526ea4460cc7cfa340b6cd75997","tagger":{"name":"Piotr
         Solnica","email":"piotr_solnica@apple.com","date":"2019-06-10T07:53:36Z"},"object":{"sha":"92eebf7b02d2e6b387cc3c769c15e588e002dd69","type":"commit","url":"https://api.github.com/repos/dry-rb/dry-validation/git/commits/92eebf7b02d2e6b387cc3c769c15e588e002dd69"},"tag":"v1.0.0","message":"tag
         v1.0.0\n","verification":{"verified":false,"reason":"unsigned","signature":null,"payload":null}}'
     http_version: 
-  recorded_at: Mon, 20 Jan 2020 22:13:32 GMT
+  recorded_at: Mon, 20 Jan 2020 22:26:49 GMT
 recorded_with: VCR 5.0.0

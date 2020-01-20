@@ -23,8 +23,15 @@ module Ossy
         json['state'].eql?('active')
       end
 
-      def tagger(repo:, tag_sha:)
-        path = "repos/#{repo}/git/tags/#{tag_sha}"
+      def tagger(repo:, tag:)
+        path = "repos/#{repo}/git/ref/tags/#{tag}"
+        resp = get(path)
+
+        return false unless resp.code.equal?(200)
+
+        sha = JSON.parse(resp.body)['object']['sha']
+
+        path = "repos/#{repo}/git/tags/#{sha}"
         resp = get(path)
 
         return false unless resp.code.equal?(200)

@@ -18,7 +18,7 @@ module Ossy
           result = client.tagger(repo: repo, tag: tag)
 
           if result && result[:verified].equal?(true)
-            puts result[:tagger]['email']
+            puts result[:tagger]['name']
           end
         end
       end

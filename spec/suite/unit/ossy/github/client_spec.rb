@@ -36,4 +36,12 @@ RSpec.describe Ossy::Github::Client do
       expect(result[:verified]).to be(false)
     end
   end
+
+  describe '#member' do
+    it 'returns org member by the full name', vcr: true, cassette: 'gh-member' do
+      result = client.member('Piotr Solnica', org: 'dry-rb')
+
+      expect(result['login']).to eql('solnic')
+    end
+  end
 end

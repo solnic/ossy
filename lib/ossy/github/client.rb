@@ -41,6 +41,28 @@ module Ossy
         { tagger: json['tagger'], verified: json['verification']['verified'] }
       end
 
+      def member(name, org:)
+        path = "orgs/#{org}/members"
+        resp = get(path)
+
+        return nil unless resp.code.equal?(200)
+
+        user = JSON.parse(resp.body)
+          .map { |member| user(member['login']) }
+          .detect { |user| user['name'].eql?(name) }
+
+        user
+      end
+
+      def user(login)
+        path = "users/#{login}"
+        resp = get(path)
+
+        return nil unless resp.code.equal?(200)
+
+        JSON.parse(resp.body)
+      end
+
       def request(meth, path, opts = {})
         http.public_send(meth, url(path), opts)
       end

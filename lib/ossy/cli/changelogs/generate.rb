@@ -2,12 +2,11 @@
 
 require 'ossy/cli/commands/core'
 require 'ossy/import'
-require 'ossy/types'
+require 'ossy/release'
 
 require 'yaml'
 require 'tilt'
 require 'ostruct'
-require 'dry/struct'
 
 module Ossy
   module CLI
@@ -21,41 +20,6 @@ module Ossy
           def update(hash)
             hash.each { |k, v| self[k.to_sym] = v }
             self
-          end
-        end
-
-        class Release < Dry::Struct
-          transform_keys(&:to_sym)
-
-          transform_types do |type|
-            if type.default?
-              type.constructor do |value|
-                value.nil? ? Dry::Types::Undefined : value
-              end
-            else
-              type
-            end
-          end
-
-          ChangeList = Types::Array.of(Types::String).default(EMPTY_ARRAY)
-
-          attribute :version, Types::Version
-          attribute? :date, Types::Nil | Types::String | Types::Params::Date
-          attribute? :summary, Types::String.optional
-          attribute? :fixed, ChangeList
-          attribute? :added, ChangeList
-          attribute? :changed, ChangeList
-
-          def fixed?
-            !fixed.empty?
-          end
-
-          def added?
-            !added.empty?
-          end
-
-          def changed?
-            !changed.empty?
           end
         end
 

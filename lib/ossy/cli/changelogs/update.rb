@@ -2,7 +2,7 @@
 
 require 'ossy/cli/commands/core'
 require 'ossy/import'
-require 'ossy/types'
+require 'ossy/release'
 
 require 'yaml'
 
@@ -15,53 +15,21 @@ module Ossy
         argument :config_path, required: true, desc: 'The path to the changelog config'
         argument :message, required: true, desc: 'Message text including the entry'
 
-        class Entry < Dry.Struct
-          transform_keys(&:to_sym)
-
-          transform_types do |type|
-            if type.default?
-              type.constructor do |value|
-                value.nil? ? Dry::Types::Undefined : value
-              end
-            else
-              type
-            end
-          end
-
-          ChangeList = Types::Coercible::Array
-            .of(Types::String.constrained(filled: true))
-            .default { [] }
-
-          attribute? :version, Types::Version
-          attribute? :fixed, ChangeList
-          attribute? :added, ChangeList
-          attribute? :changed, ChangeList
-
-          def each(&block)
-            %i[fixed added changed].each do |type|
-              yield(type, self[type]) unless self[type].empty?
-            end
-          end
-        end
-
         def call(config_path:, message:)
-          entry = Entry.new(YAML.load(message))
+          attrs = YAML.load(message)
           target = YAML.load_file(config_path)
 
-          release =
-            if entry.version
-              target.detect { |r| r['version'].eql?(entry.version) } || {}
-            else
-              target.first
-            end
+          version = attrs['version'] || target[0]['version']
+          entry = target.detect { |e| e['version'].eql?(version) } || {}
 
-          entry.each do |type, logs|
-            (release[type.to_s] ||= []).concat(logs)
+          release = Release.new(attrs.merge(version: version))
+
+          release.each do |type, logs|
+            (entry[type.to_s] ||= []).concat(logs)
           end
 
-          unless release['version']
-            release['version'] = entry.version
-            target.unshift(release)
+          unless target.include?(entry)
+            target.unshift(entry.merge(release.meta))
           end
 
           File.write(config_path, YAML.dump(target))

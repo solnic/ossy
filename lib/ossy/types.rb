@@ -5,7 +5,7 @@ module Ossy
     include Dry.Types()
 
     Version = Types::String.constrained(eql: 'unreleased') |
-      Types::String.constrained(format: %r[\d+\.\d+\.\d+])
+              Types::String.constrained(format: %r[\d+\.\d+\.\d+])
 
     Summary = Types::String.constrained(filled: true).optional
 

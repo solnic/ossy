@@ -1,3 +1,9 @@
+## 0.1.1 2020-01-22
+
+### Changed
+
+- Disabled `:logging` plugin (@solnic)
+
 ## 0.1.0 2020-01-22
 
 The first public release!

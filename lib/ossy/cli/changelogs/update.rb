@@ -16,18 +16,40 @@ module Ossy
         argument :message, required: true, desc: 'Message text including the entry'
 
         class Entry < Dry.Struct
-          attribute :type, Types::String.enum('fixed', 'added', 'changed')
-          attribute :logs, Types::Coercible::Array.of(Types::String.constrained(filled: true))
+          transform_keys(&:to_sym)
+
+          ChangeList = Types::Coercible::Array.of(Types::String.constrained(filled: true))
+
+          attribute? :version, Types::Version
+          attribute? :fixed, ChangeList
+          attribute? :added, ChangeList
+          attribute? :changed, ChangeList
+
+          def each(&block)
+            %i[fixed added changed].each do |type|
+              yield(type, self[type]) unless self[type].empty?
+            end
+          end
         end
 
         def call(config_path:, message:)
-          entries = YAML.load(message).map { |k, v| Entry.new(type: k, logs: v) }
+          entry = Entry.new(YAML.load(message))
           target = YAML.load_file(config_path)
 
-          release = target.first
+          release =
+            if entry.version
+              target.detect { |r| r['version'].eql?(entry.version) } || {}
+            else
+              target.first
+            end
 
-          entries.each do |entry|
-            (release[entry.type] ||= []).concat(entry.logs)
+          entry.each do |type, logs|
+            (release[type.to_s] ||= []).concat(logs)
+          end
+
+          unless release['version']
+            release['version'] = entry.version
+            target.unshift(release)
           end
 
           File.write(config_path, YAML.dump(target))

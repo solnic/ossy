@@ -1,4 +1,14 @@
+[gem]: https://rubygems.org/gems/ossy
+[actions]: https://github.com/solnic/ossy/actions
+[codacy]: https://www.codacy.com/manual/solnic/ossy
+[inchpages]: http://inch-ci.org/github/solnic/ossy
+
 # Ossy
+
+[![Gem Version](https://badge.fury.io/rb/ossy.svg)][gem]
+[![CI Status](https://github.com/solnic/ossy/workflows/ci/badge.svg)][actions]
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/70550ec31fdc40edbd7e2c47f707c892)][codacy]
+[![Inline docs](http://inch-ci.org/github/solnic/ossy.svg?branch=master)][inchpages]
 
 Ossy is a CLI tool that provides various commands that help with maintenance automation.
 

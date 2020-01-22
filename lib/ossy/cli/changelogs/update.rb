@@ -27,7 +27,7 @@ module Ossy
           release = Release.new(attrs.merge(version: version))
 
           release.each do |type, logs|
-            (entry[type.to_s] ||= []).concat(logs)
+            (entry[type.to_s] ||= []).concat(logs).uniq!
           end
 
           entry.update(release.meta)

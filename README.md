@@ -24,10 +24,29 @@ Or install it yourself as:
 
 ## Usage
 
-Type this in your terminal to learn more:
+First of all you need two `ENV` variables:
+
+- `GITHUB_LOGIN` - the username that ossy will use to talk to GitHub
+- `GITHUB_TOKEN` - the personal access token that you can create under [Developer settings](https://github.com/settings/tokens) on GitHub
+
+Then, to learn more, type this in your terminal:
 
 ```bash
 ossy help
+```
+
+Here are some `github` examples:
+
+```bash
+$ ossy github tagger dry-rb/dry-validation v1.2.0
+Piotr Solnica
+
+$ ossy github membership solnic dry-rb core
+solnic has active membership in dry-rb/@core
+
+$ ossy github workflow dry-rb/dry-validation sync_configs
+Requesting: dry-rb/dry-validation => sync_configs
+Success!
 ```
 
 ## Development

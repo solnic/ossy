@@ -102,6 +102,8 @@ RSpec.describe Ossy::CLI::Changelogs::Update, '#call' do
 
       output = YAML.load_file(config_path)
 
+      expect(output[0].keys).to eql(Ossy::CLI::Changelogs::Update::KEYS)
+
       expect(output[0]['version']).to eql('1.0.0')
       expect(output[0]['fixed'].last).to eql('This is the final fix')
       expect(output[0]['added'].last).to eql('This is the final addition')

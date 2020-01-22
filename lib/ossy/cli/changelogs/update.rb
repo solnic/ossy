@@ -15,6 +15,8 @@ module Ossy
         argument :config_path, required: true, desc: 'The path to the changelog config'
         argument :message, required: true, desc: 'Message text including the entry'
 
+        KEYS = %w[version summary date fixed added changed].freeze
+
         def call(config_path:, message:)
           attrs = YAML.load(message)
           target = YAML.load_file(config_path)
@@ -27,6 +29,10 @@ module Ossy
           release.each do |type, logs|
             (entry[type.to_s] ||= []).concat(logs)
           end
+
+          entry.update(release.meta)
+
+          entry = KEYS.map { |key| [key, entry[key]] }.to_h
 
           unless target.include?(entry)
             target.unshift(entry.merge(release.meta))

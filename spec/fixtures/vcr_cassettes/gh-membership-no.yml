@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.github.com/orgs/dry-rb/teams/core/memberships/github-login
+    uri: https://api.github.com/orgs/github-login/teams/core/memberships/dry-bot
     body:
       encoding: UTF-8
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Jan 2020 23:12:27 GMT
+      - Wed, 22 Jan 2020 09:28:03 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -35,16 +35,16 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4991'
+      - '4999'
       X-Ratelimit-Reset:
-      - '1579392573'
+      - '1579688883'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       - Accept-Encoding
       Etag:
-      - '"3ffdf38160fbd328f977fe2423429a8c"'
+      - '"1c8e6544eb7d0c3caa147e3ac7d81b71"'
       X-Oauth-Scopes:
       - repo
       X-Accepted-Oauth-Scopes:
@@ -70,10 +70,10 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - C0AC:3E3C:10E36A3:1414D77:5E2390DB
+      - C162:392CE:1BC6B2:20BB64:5E2815A3
     body:
       encoding: UTF-8
-      string: '{"state":"active","role":"member","url":"https://api.github.com/organizations/11280820/team/1335610/memberships/github-login"}'
+      string: '{"state":"active","role":"member","url":"https://api.github.com/organizations/11280820/team/1335610/memberships/dry-bot"}'
     http_version: 
-  recorded_at: Sat, 18 Jan 2020 23:12:27 GMT
+  recorded_at: Wed, 22 Jan 2020 09:28:03 GMT
 recorded_with: VCR 5.0.0

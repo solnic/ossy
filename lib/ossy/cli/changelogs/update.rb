@@ -17,7 +17,7 @@ module Ossy
 
         class Entry < Dry.Struct
           attribute :type, Types::String.enum('fixed', 'added', 'changed')
-          attribute :logs, Types::Array.of(Types::String.constrained(filled: true))
+          attribute :logs, Types::Coercible::Array.of(Types::String.constrained(filled: true))
         end
 
         def call(config_path:, message:)

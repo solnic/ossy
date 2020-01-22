@@ -23,24 +23,46 @@ RSpec.describe Ossy::CLI::Changelogs::Update, '#call' do
     FileUtils.rm(config_path)
   end
 
-  let(:message) do
-    <<~YML
-      fixed:
-      - This is a fix
-      added:
-      - This is an addition
-      changed:
-      - This is a change
-    YML
+  context 'with a single entry' do
+    let(:message) do
+      <<~YML
+        fixed: "This is a fix"
+        added: "This is an addition"
+        changed: "This is a change"
+      YML
+    end
+
+    it 'adds new entries' do
+      command.(options)
+
+      output = YAML.load_file(config_path)
+
+      expect(output[0]['fixed'].last).to eql('This is a fix')
+      expect(output[0]['added'].last).to eql('This is an addition')
+      expect(output[0]['changed'].last).to eql('This is a change')
+    end
   end
 
-  it 'adds new entries' do
-    command.(options)
+  context 'with multiple entries' do
+    let(:message) do
+      <<~YML
+        fixed:
+        - "This is a fix"
+        added:
+        - "This is an addition"
+        changed:
+        - "This is a change"
+      YML
+    end
 
-    output = YAML.load_file(config_path)
+    it 'adds new entries' do
+      command.(options)
 
-    expect(output[0]['fixed'].last).to eql('This is a fix')
-    expect(output[0]['added'].last).to eql('This is an addition')
-    expect(output[0]['changed'].last).to eql('This is a change')
+      output = YAML.load_file(config_path)
+
+      expect(output[0]['fixed'].last).to eql('This is a fix')
+      expect(output[0]['added'].last).to eql('This is an addition')
+      expect(output[0]['changed'].last).to eql('This is a change')
+    end
   end
 end

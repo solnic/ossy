@@ -1,8 +1,10 @@
 # Ossy
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ossy`. To experiment with that code, run `bin/console` for an interactive prompt.
+Ossy is a CLI tool that provides various commands that help with maintenance automation.
 
-TODO: Delete this and the text above, and describe your gem
+## Status
+
+This is an early stage, things are changing fast. Currently `ossy` is used by [dry-rb.org](https://dry-rb.org) and [rom-rb.org](https://rom-rb.org).
 
 ## Installation
 
@@ -22,7 +24,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Type this in your terminal to learn more:
+
+```bash
+ossy help
+```
 
 ## Development
 

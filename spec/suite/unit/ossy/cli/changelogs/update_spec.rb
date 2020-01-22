@@ -94,7 +94,6 @@ RSpec.describe Ossy::CLI::Changelogs::Update, '#call' do
         version: 1.0.0
         fixed: "This is the final fix"
         added: "This is the final addition"
-        changed: "This is the final change"
       YML
     end
 
@@ -106,7 +105,6 @@ RSpec.describe Ossy::CLI::Changelogs::Update, '#call' do
       expect(output[0]['version']).to eql('1.0.0')
       expect(output[0]['fixed'].last).to eql('This is the final fix')
       expect(output[0]['added'].last).to eql('This is the final addition')
-      expect(output[0]['changed'].last).to eql('This is the final change')
     end
   end
 end

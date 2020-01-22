@@ -18,7 +18,19 @@ module Ossy
         class Entry < Dry.Struct
           transform_keys(&:to_sym)
 
-          ChangeList = Types::Coercible::Array.of(Types::String.constrained(filled: true))
+          transform_types do |type|
+            if type.default?
+              type.constructor do |value|
+                value.nil? ? Dry::Types::Undefined : value
+              end
+            else
+              type
+            end
+          end
+
+          ChangeList = Types::Coercible::Array
+            .of(Types::String.constrained(filled: true))
+            .default { [] }
 
           attribute? :version, Types::Version
           attribute? :fixed, ChangeList

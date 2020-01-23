@@ -5,7 +5,7 @@ require 'byebug'
 
 require 'ossy/container'
 
-Ossy::Container.finalize!(freeze: false)
+# Ossy::Container.finalize!(freeze: false)
 
 SPEC_ROOT = Pathname(__FILE__).dirname
 

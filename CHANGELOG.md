@@ -1,3 +1,9 @@
+## 0.1.4 2020-01-23
+
+### Fixed
+
+- `github workflow` no longer crashes after switching to `faraday` (@solnic)
+
 ## 0.1.3 2020-01-23
 
 ### Changed

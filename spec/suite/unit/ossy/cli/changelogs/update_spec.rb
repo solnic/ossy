@@ -4,7 +4,7 @@ require 'ossy/cli/changelogs/update'
 
 RSpec.describe Ossy::CLI::Changelogs::Update, '#call' do
   subject(:command) do
-    Ossy::CLI::Changelogs::Update.new(command_name: 'update')
+    Ossy::CLI::Changelogs::Update.new
   end
 
   let(:options) do

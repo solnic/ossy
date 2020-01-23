@@ -4,7 +4,7 @@ require 'ossy/cli/changelogs/generate'
 
 RSpec.describe Ossy::CLI::Changelogs::Generate, '#call' do
   subject(:command) do
-    Ossy::CLI::Changelogs::Generate.new(command_name: 'generate')
+    Ossy::CLI::Changelogs::Generate.new
   end
 
   def config_path

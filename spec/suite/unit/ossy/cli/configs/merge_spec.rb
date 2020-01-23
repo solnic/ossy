@@ -4,7 +4,7 @@ require 'ossy/cli/configs/merge'
 
 RSpec.describe Ossy::CLI::Configs::Merge, '#call' do
   subject(:command) do
-    Ossy::CLI::Configs::Merge.new(command_name: 'merge')
+    Ossy::CLI::Configs::Merge.new
   end
 
   let(:options) do

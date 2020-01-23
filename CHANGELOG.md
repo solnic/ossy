@@ -1,3 +1,9 @@
+## 0.1.3 2020-01-23
+
+### Changed
+
+- Switched from `http` to `faraday` as it has less dependencies (@solnic)
+
 ## 0.1.2 2020-01-23
 
 ### Fixed

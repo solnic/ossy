@@ -4,30 +4,26 @@ http_interactions:
     method: get
     uri: https://api.github.com/orgs/github-login/teams/core/memberships/dry-bot
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
       Accept:
       - application/vnd.github.everest-preview+json
-      Connection:
-      - close
-      Host:
-      - api.github.com
       User-Agent:
-      - http.rb/4.3.0
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Wed, 22 Jan 2020 09:28:03 GMT
+      - Thu, 23 Jan 2020 09:15:35 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Content-Length:
-      - '121'
-      Connection:
-      - close
+      Transfer-Encoding:
+      - chunked
       Server:
       - GitHub.com
       Status:
@@ -35,22 +31,22 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4999'
+      - '4952'
       X-Ratelimit-Reset:
-      - '1579688883'
+      - '1579772466'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       - Accept-Encoding
       Etag:
-      - '"1c8e6544eb7d0c3caa147e3ac7d81b71"'
+      - W/"1c8e6544eb7d0c3caa147e3ac7d81b71"
       X-Oauth-Scopes:
       - repo
       X-Accepted-Oauth-Scopes:
       - admin:org, read:org, repo, write:org
       X-Github-Media-Type:
-      - github.everest-preview; format=json
+      - github.v3; param=everest-preview; format=json
       Access-Control-Expose-Headers:
       - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
         X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
@@ -70,10 +66,10 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - C162:392CE:1BC6B2:20BB64:5E2815A3
+      - C78F:392DB:38D9117:441581D:5E296434
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"state":"active","role":"member","url":"https://api.github.com/organizations/11280820/team/1335610/memberships/dry-bot"}'
     http_version: 
-  recorded_at: Wed, 22 Jan 2020 09:28:03 GMT
+  recorded_at: Thu, 23 Jan 2020 09:15:35 GMT
 recorded_with: VCR 5.0.0

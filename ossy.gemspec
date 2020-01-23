@@ -31,7 +31,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'dry-types', '~> 1.2'
   spec.add_runtime_dependency 'dry-struct', '~> 1.2'
   spec.add_runtime_dependency 'dry-system', '~> 0.14'
-  spec.add_runtime_dependency 'http', '~> 4.1'
+  spec.add_runtime_dependency 'faraday', '~> 1.0'
   spec.add_runtime_dependency 'tilt', '~> 2.0'
 
   spec.add_development_dependency 'bundler', '~> 2.0'

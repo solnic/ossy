@@ -10,12 +10,12 @@ RSpec.describe Ossy::Github::Workflow, '#call' do
   it 'triggers a workflow in the provided repo', vcr: true, cassette: 'gh-workflow' do
     result = workflow.('dry-rb/dry-rb.org', 'ci')
 
-    expect(result.code).to be(204)
+    expect(result.status).to be(204)
   end
 
   it 'triggers a workflow in the provided repo', vcr: true, cassette: 'gh-workflow-payload' do
     result = workflow.('dry-rb/testing', 'release', tag: 'v1.2.3')
 
-    expect(result.code).to be(204)
+    expect(result.status).to be(204)
   end
 end

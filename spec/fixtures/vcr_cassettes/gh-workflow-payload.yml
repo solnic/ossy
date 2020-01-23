@@ -2,30 +2,24 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.github.com/repos/dry-rb/testing/dispatches
+    uri: https://api.github.com/repos/github-login/testing/dispatches
     body:
       encoding: UTF-8
       string: '{"event_type":"release","client_payload":{"tag":"v1.2.3"}}'
     headers:
       Accept:
       - application/vnd.github.everest-preview+json
-      Connection:
-      - close
-      Content-Type:
-      - application/json; charset=UTF-8
-      Host:
-      - api.github.com
       User-Agent:
-      - http.rb/4.3.0
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 204
       message: No Content
     headers:
       Date:
-      - Sat, 18 Jan 2020 23:12:29 GMT
-      Connection:
-      - close
+      - Thu, 23 Jan 2020 09:16:52 GMT
       Server:
       - GitHub.com
       Status:
@@ -33,15 +27,15 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4988'
+      - '4924'
       X-Ratelimit-Reset:
-      - '1579392573'
+      - '1579772466'
       X-Oauth-Scopes:
       - repo
       X-Accepted-Oauth-Scopes:
       - ''
       X-Github-Media-Type:
-      - github.everest-preview; format=json
+      - github.v3; param=everest-preview; format=json
       Access-Control-Expose-Headers:
       - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
         X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
@@ -63,10 +57,10 @@ http_interactions:
       Vary:
       - Accept-Encoding
       X-Github-Request-Id:
-      - C0AF:12D8:1C179B7:21A7895:5E2390DD
+      - C7B5:3BE43:3884C10:43D97B5:5E296483
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Sat, 18 Jan 2020 23:12:29 GMT
+  recorded_at: Thu, 23 Jan 2020 09:16:52 GMT
 recorded_with: VCR 5.0.0

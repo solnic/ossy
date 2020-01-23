@@ -4,30 +4,26 @@ http_interactions:
     method: get
     uri: https://api.github.com/orgs/github-login/members
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
       Accept:
       - application/vnd.github.everest-preview+json
-      Connection:
-      - close
-      Host:
-      - api.github.com
       User-Agent:
-      - http.rb/4.3.0
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 21 Jan 2020 08:37:57 GMT
+      - Thu, 23 Jan 2020 09:15:40 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Content-Length:
-      - '18205'
-      Connection:
-      - close
+      Transfer-Encoding:
+      - chunked
       Server:
       - GitHub.com
       Status:
@@ -35,22 +31,22 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4970'
+      - '4946'
       X-Ratelimit-Reset:
-      - '1579598475'
+      - '1579772466'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       - Accept-Encoding
       Etag:
-      - '"2ce787fff2dca58ff3a235be0ce2486f"'
+      - W/"2ce787fff2dca58ff3a235be0ce2486f"
       X-Oauth-Scopes:
       - repo
       X-Accepted-Oauth-Scopes:
       - ''
       X-Github-Media-Type:
-      - github.everest-preview; format=json
+      - github.v3; param=everest-preview; format=json
       Access-Control-Expose-Headers:
       - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
         X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
@@ -70,40 +66,36 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - DAD7:29C4A:C06C2E:E3E618:5E26B865
+      - C795:3BE43:387C509:43CF353:5E29643C
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '[{"login":"AMHOL","id":1582784,"node_id":"MDQ6VXNlcjE1ODI3ODQ=","avatar_url":"https://avatars1.githubusercontent.com/u/1582784?v=4","gravatar_id":"","url":"https://api.github.com/users/AMHOL","html_url":"https://github.com/AMHOL","followers_url":"https://api.github.com/users/AMHOL/followers","following_url":"https://api.github.com/users/AMHOL/following{/other_user}","gists_url":"https://api.github.com/users/AMHOL/gists{/gist_id}","starred_url":"https://api.github.com/users/AMHOL/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/AMHOL/subscriptions","organizations_url":"https://api.github.com/users/AMHOL/orgs","repos_url":"https://api.github.com/users/AMHOL/repos","events_url":"https://api.github.com/users/AMHOL/events{/privacy}","received_events_url":"https://api.github.com/users/AMHOL/received_events","type":"User","site_admin":false},{"login":"andrewcroome","id":3338621,"node_id":"MDQ6VXNlcjMzMzg2MjE=","avatar_url":"https://avatars0.githubusercontent.com/u/3338621?v=4","gravatar_id":"","url":"https://api.github.com/users/andrewcroome","html_url":"https://github.com/andrewcroome","followers_url":"https://api.github.com/users/andrewcroome/followers","following_url":"https://api.github.com/users/andrewcroome/following{/other_user}","gists_url":"https://api.github.com/users/andrewcroome/gists{/gist_id}","starred_url":"https://api.github.com/users/andrewcroome/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/andrewcroome/subscriptions","organizations_url":"https://api.github.com/users/andrewcroome/orgs","repos_url":"https://api.github.com/users/andrewcroome/repos","events_url":"https://api.github.com/users/andrewcroome/events{/privacy}","received_events_url":"https://api.github.com/users/andrewcroome/received_events","type":"User","site_admin":false},{"login":"baweaver","id":979723,"node_id":"MDQ6VXNlcjk3OTcyMw==","avatar_url":"https://avatars2.githubusercontent.com/u/979723?v=4","gravatar_id":"","url":"https://api.github.com/users/baweaver","html_url":"https://github.com/baweaver","followers_url":"https://api.github.com/users/baweaver/followers","following_url":"https://api.github.com/users/baweaver/following{/other_user}","gists_url":"https://api.github.com/users/baweaver/gists{/gist_id}","starred_url":"https://api.github.com/users/baweaver/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/baweaver/subscriptions","organizations_url":"https://api.github.com/users/baweaver/orgs","repos_url":"https://api.github.com/users/baweaver/repos","events_url":"https://api.github.com/users/baweaver/events{/privacy}","received_events_url":"https://api.github.com/users/baweaver/received_events","type":"User","site_admin":false},{"login":"coop","id":64469,"node_id":"MDQ6VXNlcjY0NDY5","avatar_url":"https://avatars1.githubusercontent.com/u/64469?v=4","gravatar_id":"","url":"https://api.github.com/users/coop","html_url":"https://github.com/coop","followers_url":"https://api.github.com/users/coop/followers","following_url":"https://api.github.com/users/coop/following{/other_user}","gists_url":"https://api.github.com/users/coop/gists{/gist_id}","starred_url":"https://api.github.com/users/coop/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/coop/subscriptions","organizations_url":"https://api.github.com/users/coop/orgs","repos_url":"https://api.github.com/users/coop/repos","events_url":"https://api.github.com/users/coop/events{/privacy}","received_events_url":"https://api.github.com/users/coop/received_events","type":"User","site_admin":false},{"login":"davydovanton","id":1147484,"node_id":"MDQ6VXNlcjExNDc0ODQ=","avatar_url":"https://avatars2.githubusercontent.com/u/1147484?v=4","gravatar_id":"","url":"https://api.github.com/users/davydovanton","html_url":"https://github.com/davydovanton","followers_url":"https://api.github.com/users/davydovanton/followers","following_url":"https://api.github.com/users/davydovanton/following{/other_user}","gists_url":"https://api.github.com/users/davydovanton/gists{/gist_id}","starred_url":"https://api.github.com/users/davydovanton/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/davydovanton/subscriptions","organizations_url":"https://api.github.com/users/davydovanton/orgs","repos_url":"https://api.github.com/users/davydovanton/repos","events_url":"https://api.github.com/users/davydovanton/events{/privacy}","received_events_url":"https://api.github.com/users/davydovanton/received_events","type":"User","site_admin":false},{"login":"dNitza","id":479627,"node_id":"MDQ6VXNlcjQ3OTYyNw==","avatar_url":"https://avatars2.githubusercontent.com/u/479627?v=4","gravatar_id":"","url":"https://api.github.com/users/dNitza","html_url":"https://github.com/dNitza","followers_url":"https://api.github.com/users/dNitza/followers","following_url":"https://api.github.com/users/dNitza/following{/other_user}","gists_url":"https://api.github.com/users/dNitza/gists{/gist_id}","starred_url":"https://api.github.com/users/dNitza/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/dNitza/subscriptions","organizations_url":"https://api.github.com/users/dNitza/orgs","repos_url":"https://api.github.com/users/dNitza/repos","events_url":"https://api.github.com/users/dNitza/events{/privacy}","received_events_url":"https://api.github.com/users/dNitza/received_events","type":"User","site_admin":false},{"login":"dry-bot","id":56823541,"node_id":"MDQ6VXNlcjU2ODIzNTQx","avatar_url":"https://avatars3.githubusercontent.com/u/56823541?v=4","gravatar_id":"","url":"https://api.github.com/users/dry-bot","html_url":"https://github.com/dry-bot","followers_url":"https://api.github.com/users/dry-bot/followers","following_url":"https://api.github.com/users/dry-bot/following{/other_user}","gists_url":"https://api.github.com/users/dry-bot/gists{/gist_id}","starred_url":"https://api.github.com/users/dry-bot/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/dry-bot/subscriptions","organizations_url":"https://api.github.com/users/dry-bot/orgs","repos_url":"https://api.github.com/users/dry-bot/repos","events_url":"https://api.github.com/users/dry-bot/events{/privacy}","received_events_url":"https://api.github.com/users/dry-bot/received_events","type":"User","site_admin":false},{"login":"flash-gordon","id":802486,"node_id":"MDQ6VXNlcjgwMjQ4Ng==","avatar_url":"https://avatars0.githubusercontent.com/u/802486?v=4","gravatar_id":"","url":"https://api.github.com/users/flash-gordon","html_url":"https://github.com/flash-gordon","followers_url":"https://api.github.com/users/flash-gordon/followers","following_url":"https://api.github.com/users/flash-gordon/following{/other_user}","gists_url":"https://api.github.com/users/flash-gordon/gists{/gist_id}","starred_url":"https://api.github.com/users/flash-gordon/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/flash-gordon/subscriptions","organizations_url":"https://api.github.com/users/flash-gordon/orgs","repos_url":"https://api.github.com/users/flash-gordon/repos","events_url":"https://api.github.com/users/flash-gordon/events{/privacy}","received_events_url":"https://api.github.com/users/flash-gordon/received_events","type":"User","site_admin":false},{"login":"GustavoCaso","id":4672858,"node_id":"MDQ6VXNlcjQ2NzI4NTg=","avatar_url":"https://avatars3.githubusercontent.com/u/4672858?v=4","gravatar_id":"","url":"https://api.github.com/users/GustavoCaso","html_url":"https://github.com/GustavoCaso","followers_url":"https://api.github.com/users/GustavoCaso/followers","following_url":"https://api.github.com/users/GustavoCaso/following{/other_user}","gists_url":"https://api.github.com/users/GustavoCaso/gists{/gist_id}","starred_url":"https://api.github.com/users/GustavoCaso/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/GustavoCaso/subscriptions","organizations_url":"https://api.github.com/users/GustavoCaso/orgs","repos_url":"https://api.github.com/users/GustavoCaso/repos","events_url":"https://api.github.com/users/GustavoCaso/events{/privacy}","received_events_url":"https://api.github.com/users/GustavoCaso/received_events","type":"User","site_admin":false},{"login":"ianwhite","id":5980,"node_id":"MDQ6VXNlcjU5ODA=","avatar_url":"https://avatars3.githubusercontent.com/u/5980?v=4","gravatar_id":"","url":"https://api.github.com/users/ianwhite","html_url":"https://github.com/ianwhite","followers_url":"https://api.github.com/users/ianwhite/followers","following_url":"https://api.github.com/users/ianwhite/following{/other_user}","gists_url":"https://api.github.com/users/ianwhite/gists{/gist_id}","starred_url":"https://api.github.com/users/ianwhite/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/ianwhite/subscriptions","organizations_url":"https://api.github.com/users/ianwhite/orgs","repos_url":"https://api.github.com/users/ianwhite/repos","events_url":"https://api.github.com/users/ianwhite/events{/privacy}","received_events_url":"https://api.github.com/users/ianwhite/received_events","type":"User","site_admin":false},{"login":"jeremyf","id":2130,"node_id":"MDQ6VXNlcjIxMzA=","avatar_url":"https://avatars2.githubusercontent.com/u/2130?v=4","gravatar_id":"","url":"https://api.github.com/users/jeremyf","html_url":"https://github.com/jeremyf","followers_url":"https://api.github.com/users/jeremyf/followers","following_url":"https://api.github.com/users/jeremyf/following{/other_user}","gists_url":"https://api.github.com/users/jeremyf/gists{/gist_id}","starred_url":"https://api.github.com/users/jeremyf/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/jeremyf/subscriptions","organizations_url":"https://api.github.com/users/jeremyf/orgs","repos_url":"https://api.github.com/users/jeremyf/repos","events_url":"https://api.github.com/users/jeremyf/events{/privacy}","received_events_url":"https://api.github.com/users/jeremyf/received_events","type":"User","site_admin":false},{"login":"jodosha","id":5089,"node_id":"MDQ6VXNlcjUwODk=","avatar_url":"https://avatars1.githubusercontent.com/u/5089?v=4","gravatar_id":"","url":"https://api.github.com/users/jodosha","html_url":"https://github.com/jodosha","followers_url":"https://api.github.com/users/jodosha/followers","following_url":"https://api.github.com/users/jodosha/following{/other_user}","gists_url":"https://api.github.com/users/jodosha/gists{/gist_id}","starred_url":"https://api.github.com/users/jodosha/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/jodosha/subscriptions","organizations_url":"https://api.github.com/users/jodosha/orgs","repos_url":"https://api.github.com/users/jodosha/repos","events_url":"https://api.github.com/users/jodosha/events{/privacy}","received_events_url":"https://api.github.com/users/jodosha/received_events","type":"User","site_admin":false},{"login":"marshall-lee","id":3194530,"node_id":"MDQ6VXNlcjMxOTQ1MzA=","avatar_url":"https://avatars0.githubusercontent.com/u/3194530?v=4","gravatar_id":"","url":"https://api.github.com/users/marshall-lee","html_url":"https://github.com/marshall-lee","followers_url":"https://api.github.com/users/marshall-lee/followers","following_url":"https://api.github.com/users/marshall-lee/following{/other_user}","gists_url":"https://api.github.com/users/marshall-lee/gists{/gist_id}","starred_url":"https://api.github.com/users/marshall-lee/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/marshall-lee/subscriptions","organizations_url":"https://api.github.com/users/marshall-lee/orgs","repos_url":"https://api.github.com/users/marshall-lee/repos","events_url":"https://api.github.com/users/marshall-lee/events{/privacy}","received_events_url":"https://api.github.com/users/marshall-lee/received_events","type":"User","site_admin":false},{"login":"Morozzzko","id":887264,"node_id":"MDQ6VXNlcjg4NzI2NA==","avatar_url":"https://avatars2.githubusercontent.com/u/887264?v=4","gravatar_id":"","url":"https://api.github.com/users/Morozzzko","html_url":"https://github.com/Morozzzko","followers_url":"https://api.github.com/users/Morozzzko/followers","following_url":"https://api.github.com/users/Morozzzko/following{/other_user}","gists_url":"https://api.github.com/users/Morozzzko/gists{/gist_id}","starred_url":"https://api.github.com/users/Morozzzko/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Morozzzko/subscriptions","organizations_url":"https://api.github.com/users/Morozzzko/orgs","repos_url":"https://api.github.com/users/Morozzzko/repos","events_url":"https://api.github.com/users/Morozzzko/events{/privacy}","received_events_url":"https://api.github.com/users/Morozzzko/received_events","type":"User","site_admin":false},{"login":"nepalez","id":1526628,"node_id":"MDQ6VXNlcjE1MjY2Mjg=","avatar_url":"https://avatars2.githubusercontent.com/u/1526628?v=4","gravatar_id":"","url":"https://api.github.com/users/nepalez","html_url":"https://github.com/nepalez","followers_url":"https://api.github.com/users/nepalez/followers","following_url":"https://api.github.com/users/nepalez/following{/other_user}","gists_url":"https://api.github.com/users/nepalez/gists{/gist_id}","starred_url":"https://api.github.com/users/nepalez/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/nepalez/subscriptions","organizations_url":"https://api.github.com/users/nepalez/orgs","repos_url":"https://api.github.com/users/nepalez/repos","events_url":"https://api.github.com/users/nepalez/events{/privacy}","received_events_url":"https://api.github.com/users/nepalez/received_events","type":"User","site_admin":false},{"login":"rom-bot","id":56911883,"node_id":"MDQ6VXNlcjU2OTExODgz","avatar_url":"https://avatars2.githubusercontent.com/u/56911883?v=4","gravatar_id":"","url":"https://api.github.com/users/rom-bot","html_url":"https://github.com/rom-bot","followers_url":"https://api.github.com/users/rom-bot/followers","following_url":"https://api.github.com/users/rom-bot/following{/other_user}","gists_url":"https://api.github.com/users/rom-bot/gists{/gist_id}","starred_url":"https://api.github.com/users/rom-bot/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/rom-bot/subscriptions","organizations_url":"https://api.github.com/users/rom-bot/orgs","repos_url":"https://api.github.com/users/rom-bot/repos","events_url":"https://api.github.com/users/rom-bot/events{/privacy}","received_events_url":"https://api.github.com/users/rom-bot/received_events","type":"User","site_admin":false},{"login":"skryukov","id":23056378,"node_id":"MDQ6VXNlcjIzMDU2Mzc4","avatar_url":"https://avatars2.githubusercontent.com/u/23056378?v=4","gravatar_id":"","url":"https://api.github.com/users/skryukov","html_url":"https://github.com/skryukov","followers_url":"https://api.github.com/users/skryukov/followers","following_url":"https://api.github.com/users/skryukov/following{/other_user}","gists_url":"https://api.github.com/users/skryukov/gists{/gist_id}","starred_url":"https://api.github.com/users/skryukov/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/skryukov/subscriptions","organizations_url":"https://api.github.com/users/skryukov/orgs","repos_url":"https://api.github.com/users/skryukov/repos","events_url":"https://api.github.com/users/skryukov/events{/privacy}","received_events_url":"https://api.github.com/users/skryukov/received_events","type":"User","site_admin":false},{"login":"solnic","id":1066,"node_id":"MDQ6VXNlcjEwNjY=","avatar_url":"https://avatars2.githubusercontent.com/u/1066?v=4","gravatar_id":"","url":"https://api.github.com/users/solnic","html_url":"https://github.com/solnic","followers_url":"https://api.github.com/users/solnic/followers","following_url":"https://api.github.com/users/solnic/following{/other_user}","gists_url":"https://api.github.com/users/solnic/gists{/gist_id}","starred_url":"https://api.github.com/users/solnic/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/solnic/subscriptions","organizations_url":"https://api.github.com/users/solnic/orgs","repos_url":"https://api.github.com/users/solnic/repos","events_url":"https://api.github.com/users/solnic/events{/privacy}","received_events_url":"https://api.github.com/users/solnic/received_events","type":"User","site_admin":false},{"login":"timriley","id":3134,"node_id":"MDQ6VXNlcjMxMzQ=","avatar_url":"https://avatars0.githubusercontent.com/u/3134?v=4","gravatar_id":"","url":"https://api.github.com/users/timriley","html_url":"https://github.com/timriley","followers_url":"https://api.github.com/users/timriley/followers","following_url":"https://api.github.com/users/timriley/following{/other_user}","gists_url":"https://api.github.com/users/timriley/gists{/gist_id}","starred_url":"https://api.github.com/users/timriley/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/timriley/subscriptions","organizations_url":"https://api.github.com/users/timriley/orgs","repos_url":"https://api.github.com/users/timriley/repos","events_url":"https://api.github.com/users/timriley/events{/privacy}","received_events_url":"https://api.github.com/users/timriley/received_events","type":"User","site_admin":false},{"login":"waiting-for-dev","id":52650,"node_id":"MDQ6VXNlcjUyNjUw","avatar_url":"https://avatars1.githubusercontent.com/u/52650?v=4","gravatar_id":"","url":"https://api.github.com/users/waiting-for-dev","html_url":"https://github.com/waiting-for-dev","followers_url":"https://api.github.com/users/waiting-for-dev/followers","following_url":"https://api.github.com/users/waiting-for-dev/following{/other_user}","gists_url":"https://api.github.com/users/waiting-for-dev/gists{/gist_id}","starred_url":"https://api.github.com/users/waiting-for-dev/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/waiting-for-dev/subscriptions","organizations_url":"https://api.github.com/users/waiting-for-dev/orgs","repos_url":"https://api.github.com/users/waiting-for-dev/repos","events_url":"https://api.github.com/users/waiting-for-dev/events{/privacy}","received_events_url":"https://api.github.com/users/waiting-for-dev/received_events","type":"User","site_admin":false}]'
     http_version: 
-  recorded_at: Tue, 21 Jan 2020 08:37:57 GMT
+  recorded_at: Thu, 23 Jan 2020 09:15:40 GMT
 - request:
     method: get
     uri: https://api.github.com/users/AMHOL
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
       Accept:
       - application/vnd.github.everest-preview+json
-      Connection:
-      - close
-      Host:
-      - api.github.com
       User-Agent:
-      - http.rb/4.3.0
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 21 Jan 2020 08:37:57 GMT
+      - Thu, 23 Jan 2020 09:15:40 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Content-Length:
-      - '1162'
-      Connection:
-      - close
+      Transfer-Encoding:
+      - chunked
       Server:
       - GitHub.com
       Status:
@@ -111,16 +103,16 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4969'
+      - '4945'
       X-Ratelimit-Reset:
-      - '1579598474'
+      - '1579772465'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       - Accept-Encoding
       Etag:
-      - '"fdf39b400ba86a79c08251630fb05034"'
+      - W/"fdf39b400ba86a79c08251630fb05034"
       Last-Modified:
       - Thu, 19 Dec 2019 00:49:20 GMT
       X-Oauth-Scopes:
@@ -128,7 +120,7 @@ http_interactions:
       X-Accepted-Oauth-Scopes:
       - ''
       X-Github-Media-Type:
-      - github.everest-preview; format=json
+      - github.v3; param=everest-preview; format=json
       Access-Control-Expose-Headers:
       - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
         X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
@@ -148,42 +140,38 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - DAD8:F8D6:F46D67:12355A3:5E26B865
+      - C796:3B0BF:2BA8305:3450345:5E29643C
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"login":"AMHOL","id":1582784,"node_id":"MDQ6VXNlcjE1ODI3ODQ=","avatar_url":"https://avatars1.githubusercontent.com/u/1582784?v=4","gravatar_id":"","url":"https://api.github.com/users/AMHOL","html_url":"https://github.com/AMHOL","followers_url":"https://api.github.com/users/AMHOL/followers","following_url":"https://api.github.com/users/AMHOL/following{/other_user}","gists_url":"https://api.github.com/users/AMHOL/gists{/gist_id}","starred_url":"https://api.github.com/users/AMHOL/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/AMHOL/subscriptions","organizations_url":"https://api.github.com/users/AMHOL/orgs","repos_url":"https://api.github.com/users/AMHOL/repos","events_url":"https://api.github.com/users/AMHOL/events{/privacy}","received_events_url":"https://api.github.com/users/AMHOL/received_events","type":"User","site_admin":false,"name":"Andy
         Holland","company":null,"blog":"http://cv.droppages.com","location":"Perth,
         WA","email":"andyholland1991@aol.com","hireable":null,"bio":null,"public_repos":22,"public_gists":31,"followers":69,"following":33,"created_at":"2012-03-28T09:25:19Z","updated_at":"2019-12-19T00:49:20Z"}'
     http_version: 
-  recorded_at: Tue, 21 Jan 2020 08:37:57 GMT
+  recorded_at: Thu, 23 Jan 2020 09:15:40 GMT
 - request:
     method: get
     uri: https://api.github.com/users/andrewcroome
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
       Accept:
       - application/vnd.github.everest-preview+json
-      Connection:
-      - close
-      Host:
-      - api.github.com
       User-Agent:
-      - http.rb/4.3.0
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 21 Jan 2020 08:37:58 GMT
+      - Thu, 23 Jan 2020 09:15:41 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Content-Length:
-      - '1225'
-      Connection:
-      - close
+      Transfer-Encoding:
+      - chunked
       Server:
       - GitHub.com
       Status:
@@ -191,16 +179,16 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4968'
+      - '4944'
       X-Ratelimit-Reset:
-      - '1579598475'
+      - '1579772466'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       - Accept-Encoding
       Etag:
-      - '"96dfd351ecb9e4b7fa6cbff31a387aad"'
+      - W/"96dfd351ecb9e4b7fa6cbff31a387aad"
       Last-Modified:
       - Tue, 14 Jan 2020 00:00:43 GMT
       X-Oauth-Scopes:
@@ -208,7 +196,7 @@ http_interactions:
       X-Accepted-Oauth-Scopes:
       - ''
       X-Github-Media-Type:
-      - github.everest-preview; format=json
+      - github.v3; param=everest-preview; format=json
       Access-Control-Expose-Headers:
       - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
         X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
@@ -228,42 +216,38 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - DAD9:F8D3:B943DD:DC3E0D:5E26B866
+      - C797:24C71:1AAD286:1FF289D:5E29643C
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"login":"andrewcroome","id":3338621,"node_id":"MDQ6VXNlcjMzMzg2MjE=","avatar_url":"https://avatars0.githubusercontent.com/u/3338621?v=4","gravatar_id":"","url":"https://api.github.com/users/andrewcroome","html_url":"https://github.com/andrewcroome","followers_url":"https://api.github.com/users/andrewcroome/followers","following_url":"https://api.github.com/users/andrewcroome/following{/other_user}","gists_url":"https://api.github.com/users/andrewcroome/gists{/gist_id}","starred_url":"https://api.github.com/users/andrewcroome/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/andrewcroome/subscriptions","organizations_url":"https://api.github.com/users/andrewcroome/orgs","repos_url":"https://api.github.com/users/andrewcroome/repos","events_url":"https://api.github.com/users/andrewcroome/events{/privacy}","received_events_url":"https://api.github.com/users/andrewcroome/received_events","type":"User","site_admin":false,"name":"Andrew
         Croome","company":null,"blog":"","location":"Melbourne, Australia","email":null,"hireable":null,"bio":"Rubyist
         @icelab ","public_repos":31,"public_gists":1,"followers":6,"following":2,"created_at":"2013-01-22T12:13:13Z","updated_at":"2020-01-14T00:00:43Z"}'
     http_version: 
-  recorded_at: Tue, 21 Jan 2020 08:37:58 GMT
+  recorded_at: Thu, 23 Jan 2020 09:15:41 GMT
 - request:
     method: get
     uri: https://api.github.com/users/baweaver
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
       Accept:
       - application/vnd.github.everest-preview+json
-      Connection:
-      - close
-      Host:
-      - api.github.com
       User-Agent:
-      - http.rb/4.3.0
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 21 Jan 2020 08:37:58 GMT
+      - Thu, 23 Jan 2020 09:15:41 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Content-Length:
-      - '1220'
-      Connection:
-      - close
+      Transfer-Encoding:
+      - chunked
       Server:
       - GitHub.com
       Status:
@@ -271,16 +255,16 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4967'
+      - '4943'
       X-Ratelimit-Reset:
-      - '1579598475'
+      - '1579772465'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       - Accept-Encoding
       Etag:
-      - '"bccd9c7112c25f9732bd8ba97d039858"'
+      - W/"bccd9c7112c25f9732bd8ba97d039858"
       Last-Modified:
       - Wed, 08 Jan 2020 04:31:03 GMT
       X-Oauth-Scopes:
@@ -288,7 +272,7 @@ http_interactions:
       X-Accepted-Oauth-Scopes:
       - ''
       X-Github-Media-Type:
-      - github.everest-preview; format=json
+      - github.v3; param=everest-preview; format=json
       Access-Control-Expose-Headers:
       - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
         X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
@@ -308,43 +292,39 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - DADA:20DA2:11602B:14B481:5E26B866
+      - C798:2BB14:3759258:4254FA2:5E29643D
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"login":"baweaver","id":979723,"node_id":"MDQ6VXNlcjk3OTcyMw==","avatar_url":"https://avatars2.githubusercontent.com/u/979723?v=4","gravatar_id":"","url":"https://api.github.com/users/baweaver","html_url":"https://github.com/baweaver","followers_url":"https://api.github.com/users/baweaver/followers","following_url":"https://api.github.com/users/baweaver/following{/other_user}","gists_url":"https://api.github.com/users/baweaver/gists{/gist_id}","starred_url":"https://api.github.com/users/baweaver/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/baweaver/subscriptions","organizations_url":"https://api.github.com/users/baweaver/orgs","repos_url":"https://api.github.com/users/baweaver/repos","events_url":"https://api.github.com/users/baweaver/events{/privacy}","received_events_url":"https://api.github.com/users/baweaver/received_events","type":"User","site_admin":false,"name":"Brandon
         Weaver","company":"@square","blog":"http://www.baweaver.com","location":"San
         Francisco, CA","email":null,"hireable":null,"bio":"Ruby and Javascript at
         Square","public_repos":184,"public_gists":106,"followers":178,"following":46,"created_at":"2011-08-14T20:14:28Z","updated_at":"2020-01-08T04:31:03Z"}'
     http_version: 
-  recorded_at: Tue, 21 Jan 2020 08:37:58 GMT
+  recorded_at: Thu, 23 Jan 2020 09:15:41 GMT
 - request:
     method: get
     uri: https://api.github.com/users/coop
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
       Accept:
       - application/vnd.github.everest-preview+json
-      Connection:
-      - close
-      Host:
-      - api.github.com
       User-Agent:
-      - http.rb/4.3.0
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 21 Jan 2020 08:37:59 GMT
+      - Thu, 23 Jan 2020 09:15:41 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Content-Length:
-      - '1138'
-      Connection:
-      - close
+      Transfer-Encoding:
+      - chunked
       Server:
       - GitHub.com
       Status:
@@ -352,16 +332,16 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4966'
+      - '4942'
       X-Ratelimit-Reset:
-      - '1579598474'
+      - '1579772465'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       - Accept-Encoding
       Etag:
-      - '"3d8919c5b4af3fa5add4e83ca6966848"'
+      - W/"3d8919c5b4af3fa5add4e83ca6966848"
       Last-Modified:
       - Tue, 17 Dec 2019 05:13:29 GMT
       X-Oauth-Scopes:
@@ -369,7 +349,7 @@ http_interactions:
       X-Accepted-Oauth-Scopes:
       - ''
       X-Github-Media-Type:
-      - github.everest-preview; format=json
+      - github.v3; param=everest-preview; format=json
       Access-Control-Expose-Headers:
       - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
         X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
@@ -389,42 +369,38 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - DADB:F8D3:B944BC:DC3F1E:5E26B866
+      - C799:2BB14:37592E4:425504F:5E29643D
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"login":"coop","id":64469,"node_id":"MDQ6VXNlcjY0NDY5","avatar_url":"https://avatars1.githubusercontent.com/u/64469?v=4","gravatar_id":"","url":"https://api.github.com/users/coop","html_url":"https://github.com/coop","followers_url":"https://api.github.com/users/coop/followers","following_url":"https://api.github.com/users/coop/following{/other_user}","gists_url":"https://api.github.com/users/coop/gists{/gist_id}","starred_url":"https://api.github.com/users/coop/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/coop/subscriptions","organizations_url":"https://api.github.com/users/coop/orgs","repos_url":"https://api.github.com/users/coop/repos","events_url":"https://api.github.com/users/coop/events{/privacy}","received_events_url":"https://api.github.com/users/coop/received_events","type":"User","site_admin":false,"name":"Tim
         Cooper","company":null,"blog":"http://timcorp.io","location":"Brisbane QLD
         Australia","email":"tim@timcorp.io","hireable":true,"bio":null,"public_repos":30,"public_gists":47,"followers":13,"following":10,"created_at":"2009-03-18T03:36:18Z","updated_at":"2019-12-17T05:13:29Z"}'
     http_version: 
-  recorded_at: Tue, 21 Jan 2020 08:37:58 GMT
+  recorded_at: Thu, 23 Jan 2020 09:15:41 GMT
 - request:
     method: get
     uri: https://api.github.com/users/davydovanton
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
       Accept:
       - application/vnd.github.everest-preview+json
-      Connection:
-      - close
-      Host:
-      - api.github.com
       User-Agent:
-      - http.rb/4.3.0
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 21 Jan 2020 08:37:59 GMT
+      - Thu, 23 Jan 2020 09:15:42 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Content-Length:
-      - '1478'
-      Connection:
-      - close
+      Transfer-Encoding:
+      - chunked
       Server:
       - GitHub.com
       Status:
@@ -432,16 +408,16 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4965'
+      - '4941'
       X-Ratelimit-Reset:
-      - '1579598475'
+      - '1579772466'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       - Accept-Encoding
       Etag:
-      - '"659b0e2f494475dd4cc829d31b99a5b4"'
+      - W/"659b0e2f494475dd4cc829d31b99a5b4"
       Last-Modified:
       - Mon, 20 Jan 2020 12:14:33 GMT
       X-Oauth-Scopes:
@@ -449,7 +425,7 @@ http_interactions:
       X-Accepted-Oauth-Scopes:
       - ''
       X-Github-Media-Type:
-      - github.everest-preview; format=json
+      - github.v3; param=everest-preview; format=json
       Access-Control-Expose-Headers:
       - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
         X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
@@ -469,44 +445,37 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - DADC:27157:F31CA6:122F11E:5E26B867
+      - C79A:392CC:19AD65:1ED0E2:5E29643D
     body:
-      encoding: UTF-8
-      string: "{\"login\":\"davydovanton\",\"id\":1147484,\"node_id\":\"MDQ6VXNlcjExNDc0ODQ=\",\"avatar_url\":\"https://avatars2.githubusercontent.com/u/1147484?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/davydovanton\",\"html_url\":\"https://github.com/davydovanton\",\"followers_url\":\"https://api.github.com/users/davydovanton/followers\",\"following_url\":\"https://api.github.com/users/davydovanton/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/davydovanton/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/davydovanton/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/davydovanton/subscriptions\",\"organizations_url\":\"https://api.github.com/users/davydovanton/orgs\",\"repos_url\":\"https://api.github.com/users/davydovanton/repos\",\"events_url\":\"https://api.github.com/users/davydovanton/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/davydovanton/received_events\",\"type\":\"User\",\"site_admin\":false,\"name\":\"Anton
-        Davydov\",\"company\":\"@toptal\",\"blog\":\"http://davydovanton.com\",\"location\":\"Moscow,
-        Russia\",\"email\":\"mail@davydovanton.com\",\"hireable\":null,\"bio\":\"Indie
-        OSS developer ㅤㅤㅤㅤㅤㅤㅤㅤ\\r\\nBackend architect at @toptal ㅤㅤㅤㅤㅤSpace-Rocket
-        ship builder \U0001F680ㅤㅤㅤ\\r\\n@hanami @github-login core \U0001F338ㅤㅤㅤㅤ\\r\\nㅤㅤㅤㅤㅤㅤㅤㅤㅤ\U0001F496\U0001F49A\U0001F49C\U0001F49D\U0001F499\",\"public_repos\":207,\"public_gists\":57,\"followers\":453,\"following\":43,\"created_at\":\"2011-10-24T06:11:14Z\",\"updated_at\":\"2020-01-20T12:14:33Z\"}"
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJsb2dpbiI6ImRhdnlkb3ZhbnRvbiIsImlkIjoxMTQ3NDg0LCJub2RlX2lkIjoiTURRNlZYTmxjakV4TkRjME9EUT0iLCJhdmF0YXJfdXJsIjoiaHR0cHM6Ly9hdmF0YXJzMi5naXRodWJ1c2VyY29udGVudC5jb20vdS8xMTQ3NDg0P3Y9NCIsImdyYXZhdGFyX2lkIjoiIiwidXJsIjoiaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS91c2Vycy9kYXZ5ZG92YW50b24iLCJodG1sX3VybCI6Imh0dHBzOi8vZ2l0aHViLmNvbS9kYXZ5ZG92YW50b24iLCJmb2xsb3dlcnNfdXJsIjoiaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS91c2Vycy9kYXZ5ZG92YW50b24vZm9sbG93ZXJzIiwiZm9sbG93aW5nX3VybCI6Imh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vdXNlcnMvZGF2eWRvdmFudG9uL2ZvbGxvd2luZ3svb3RoZXJfdXNlcn0iLCJnaXN0c191cmwiOiJodHRwczovL2FwaS5naXRodWIuY29tL3VzZXJzL2Rhdnlkb3ZhbnRvbi9naXN0c3svZ2lzdF9pZH0iLCJzdGFycmVkX3VybCI6Imh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vdXNlcnMvZGF2eWRvdmFudG9uL3N0YXJyZWR7L293bmVyfXsvcmVwb30iLCJzdWJzY3JpcHRpb25zX3VybCI6Imh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vdXNlcnMvZGF2eWRvdmFudG9uL3N1YnNjcmlwdGlvbnMiLCJvcmdhbml6YXRpb25zX3VybCI6Imh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vdXNlcnMvZGF2eWRvdmFudG9uL29yZ3MiLCJyZXBvc191cmwiOiJodHRwczovL2FwaS5naXRodWIuY29tL3VzZXJzL2Rhdnlkb3ZhbnRvbi9yZXBvcyIsImV2ZW50c191cmwiOiJodHRwczovL2FwaS5naXRodWIuY29tL3VzZXJzL2Rhdnlkb3ZhbnRvbi9ldmVudHN7L3ByaXZhY3l9IiwicmVjZWl2ZWRfZXZlbnRzX3VybCI6Imh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vdXNlcnMvZGF2eWRvdmFudG9uL3JlY2VpdmVkX2V2ZW50cyIsInR5cGUiOiJVc2VyIiwic2l0ZV9hZG1pbiI6ZmFsc2UsIm5hbWUiOiJBbnRvbiBEYXZ5ZG92IiwiY29tcGFueSI6IkB0b3B0YWwiLCJibG9nIjoiaHR0cDovL2Rhdnlkb3ZhbnRvbi5jb20iLCJsb2NhdGlvbiI6Ik1vc2NvdywgUnVzc2lhIiwiZW1haWwiOiJtYWlsQGRhdnlkb3ZhbnRvbi5jb20iLCJoaXJlYWJsZSI6bnVsbCwiYmlvIjoiSW5kaWUgT1NTIGRldmVsb3BlciDjhaTjhaTjhaTjhaTjhaTjhaTjhaTjhaRcclxuQmFja2VuZCBhcmNoaXRlY3QgYXQgQHRvcHRhbCDjhaTjhaTjhaTjhaTjhaRTcGFjZS1Sb2NrZXQgc2hpcCBidWlsZGVyIPCfmoDjhaTjhaTjhaRcclxuQGhhbmFtaSBAZ2l0aHViLWxvZ2luIGNvcmUg8J+MuOOFpOOFpOOFpOOFpFxyXG7jhaTjhaTjhaTjhaTjhaTjhaTjhaTjhaTjhaTwn5KW8J+SmvCfkpzwn5Kd8J+SmSIsInB1YmxpY19yZXBvcyI6MjA3LCJwdWJsaWNfZ2lzdHMiOjU3LCJmb2xsb3dlcnMiOjQ1MywiZm9sbG93aW5nIjo0MywiY3JlYXRlZF9hdCI6IjIwMTEtMTAtMjRUMDY6MTE6MTRaIiwidXBkYXRlZF9hdCI6IjIwMjAtMDEtMjBUMTI6MTQ6MzNaIn0=
     http_version: 
-  recorded_at: Tue, 21 Jan 2020 08:37:59 GMT
+  recorded_at: Thu, 23 Jan 2020 09:15:42 GMT
 - request:
     method: get
     uri: https://api.github.com/users/dNitza
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
       Accept:
       - application/vnd.github.everest-preview+json
-      Connection:
-      - close
-      Host:
-      - api.github.com
       User-Agent:
-      - http.rb/4.3.0
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 21 Jan 2020 08:37:59 GMT
+      - Thu, 23 Jan 2020 09:15:42 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Content-Length:
-      - '1161'
-      Connection:
-      - close
+      Transfer-Encoding:
+      - chunked
       Server:
       - GitHub.com
       Status:
@@ -514,24 +483,24 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4964'
+      - '4940'
       X-Ratelimit-Reset:
-      - '1579598475'
+      - '1579772465'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       - Accept-Encoding
       Etag:
-      - '"0c71e2073659175687619bd6b0070052"'
+      - W/"fe07f5077402ce0e1e90b27edda1d7e3"
       Last-Modified:
-      - Wed, 01 Jan 2020 06:40:52 GMT
+      - Wed, 22 Jan 2020 22:17:54 GMT
       X-Oauth-Scopes:
       - repo
       X-Accepted-Oauth-Scopes:
       - ''
       X-Github-Media-Type:
-      - github.everest-preview; format=json
+      - github.v3; param=everest-preview; format=json
       Access-Control-Expose-Headers:
       - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
         X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
@@ -551,42 +520,38 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - DADD:9B8E:FB27CC:12AE448:5E26B867
+      - C79B:24C73:371B8A2:422B513:5E29643E
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"login":"dNitza","id":479627,"node_id":"MDQ6VXNlcjQ3OTYyNw==","avatar_url":"https://avatars2.githubusercontent.com/u/479627?v=4","gravatar_id":"","url":"https://api.github.com/users/dNitza","html_url":"https://github.com/dNitza","followers_url":"https://api.github.com/users/dNitza/followers","following_url":"https://api.github.com/users/dNitza/following{/other_user}","gists_url":"https://api.github.com/users/dNitza/gists{/gist_id}","starred_url":"https://api.github.com/users/dNitza/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/dNitza/subscriptions","organizations_url":"https://api.github.com/users/dNitza/orgs","repos_url":"https://api.github.com/users/dNitza/repos","events_url":"https://api.github.com/users/dNitza/events{/privacy}","received_events_url":"https://api.github.com/users/dNitza/received_events","type":"User","site_admin":false,"name":"Daniel
         Nitsikopoulos","company":"@icelab ","blog":"dNitza.com","location":"Canberra,
-        Australia","email":null,"hireable":null,"bio":null,"public_repos":36,"public_gists":5,"followers":16,"following":34,"created_at":"2010-11-13T01:34:31Z","updated_at":"2020-01-01T06:40:52Z"}'
+        Australia","email":null,"hireable":null,"bio":null,"public_repos":36,"public_gists":5,"followers":16,"following":34,"created_at":"2010-11-13T01:34:31Z","updated_at":"2020-01-22T22:17:54Z"}'
     http_version: 
-  recorded_at: Tue, 21 Jan 2020 08:37:59 GMT
+  recorded_at: Thu, 23 Jan 2020 09:15:42 GMT
 - request:
     method: get
     uri: https://api.github.com/users/dry-bot
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
       Accept:
       - application/vnd.github.everest-preview+json
-      Connection:
-      - close
-      Host:
-      - api.github.com
       User-Agent:
-      - http.rb/4.3.0
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 21 Jan 2020 08:38:00 GMT
+      - Thu, 23 Jan 2020 09:15:42 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Content-Length:
-      - '1166'
-      Connection:
-      - close
+      Transfer-Encoding:
+      - chunked
       Server:
       - GitHub.com
       Status:
@@ -594,16 +559,16 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4963'
+      - '4939'
       X-Ratelimit-Reset:
-      - '1579598474'
+      - '1579772465'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       - Accept-Encoding
       Etag:
-      - '"28e5ba4d7adb8858837b8d0f22b210ba"'
+      - W/"28e5ba4d7adb8858837b8d0f22b210ba"
       Last-Modified:
       - Sat, 18 Jan 2020 23:18:23 GMT
       X-Oauth-Scopes:
@@ -611,7 +576,7 @@ http_interactions:
       X-Accepted-Oauth-Scopes:
       - ''
       X-Github-Media-Type:
-      - github.everest-preview; format=json
+      - github.v3; param=everest-preview; format=json
       Access-Control-Expose-Headers:
       - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
         X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
@@ -631,42 +596,38 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - DADE:27153:BAA610:DEF790:5E26B867
+      - C79D:3BE41:1BCD834:2148B43:5E29643E
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"login":"dry-bot","id":56823541,"node_id":"MDQ6VXNlcjU2ODIzNTQx","avatar_url":"https://avatars3.githubusercontent.com/u/56823541?v=4","gravatar_id":"","url":"https://api.github.com/users/dry-bot","html_url":"https://github.com/dry-bot","followers_url":"https://api.github.com/users/dry-bot/followers","following_url":"https://api.github.com/users/dry-bot/following{/other_user}","gists_url":"https://api.github.com/users/dry-bot/gists{/gist_id}","starred_url":"https://api.github.com/users/dry-bot/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/dry-bot/subscriptions","organizations_url":"https://api.github.com/users/dry-bot/orgs","repos_url":"https://api.github.com/users/dry-bot/repos","events_url":"https://api.github.com/users/dry-bot/events{/privacy}","received_events_url":"https://api.github.com/users/dry-bot/received_events","type":"User","site_admin":false,"name":"github-login''s
         bot","company":null,"blog":"https://github-login.org","location":null,"email":null,"hireable":null,"bio":"I''m
         a @github-login bot","public_repos":0,"public_gists":0,"followers":0,"following":0,"created_at":"2019-10-21T09:40:14Z","updated_at":"2020-01-18T23:18:23Z"}'
     http_version: 
-  recorded_at: Tue, 21 Jan 2020 08:37:59 GMT
+  recorded_at: Thu, 23 Jan 2020 09:15:42 GMT
 - request:
     method: get
     uri: https://api.github.com/users/flash-gordon
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
       Accept:
       - application/vnd.github.everest-preview+json
-      Connection:
-      - close
-      Host:
-      - api.github.com
       User-Agent:
-      - http.rb/4.3.0
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 21 Jan 2020 08:38:00 GMT
+      - Thu, 23 Jan 2020 09:15:43 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Content-Length:
-      - '1248'
-      Connection:
-      - close
+      Transfer-Encoding:
+      - chunked
       Server:
       - GitHub.com
       Status:
@@ -674,16 +635,16 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4962'
+      - '4938'
       X-Ratelimit-Reset:
-      - '1579598475'
+      - '1579772466'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       - Accept-Encoding
       Etag:
-      - '"a53348e3c1352cc5460c26188cd9e3d8"'
+      - W/"a53348e3c1352cc5460c26188cd9e3d8"
       Last-Modified:
       - Sun, 19 Jan 2020 19:09:06 GMT
       X-Oauth-Scopes:
@@ -691,7 +652,7 @@ http_interactions:
       X-Accepted-Oauth-Scopes:
       - ''
       X-Github-Media-Type:
-      - github.everest-preview; format=json
+      - github.v3; param=everest-preview; format=json
       Access-Control-Expose-Headers:
       - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
         X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
@@ -711,42 +672,38 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - DADF:9B8C:B6C177:D9BC19:5E26B868
+      - C79E:2BB13:2B261AA:33BAD0A:5E29643E
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"login":"flash-gordon","id":802486,"node_id":"MDQ6VXNlcjgwMjQ4Ng==","avatar_url":"https://avatars0.githubusercontent.com/u/802486?v=4","gravatar_id":"","url":"https://api.github.com/users/flash-gordon","html_url":"https://github.com/flash-gordon","followers_url":"https://api.github.com/users/flash-gordon/followers","following_url":"https://api.github.com/users/flash-gordon/following{/other_user}","gists_url":"https://api.github.com/users/flash-gordon/gists{/gist_id}","starred_url":"https://api.github.com/users/flash-gordon/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/flash-gordon/subscriptions","organizations_url":"https://api.github.com/users/flash-gordon/orgs","repos_url":"https://api.github.com/users/flash-gordon/repos","events_url":"https://api.github.com/users/flash-gordon/events{/privacy}","received_events_url":"https://api.github.com/users/flash-gordon/received_events","type":"User","site_admin":false,"name":"Nikita
         Shilnikov","company":"@latera @planado ","blog":"","location":"Moscow","email":null,"hireable":null,"bio":"@github-login
         and @rom-rb core developer","public_repos":27,"public_gists":69,"followers":132,"following":0,"created_at":"2011-05-21T18:37:15Z","updated_at":"2020-01-19T19:09:06Z"}'
     http_version: 
-  recorded_at: Tue, 21 Jan 2020 08:38:00 GMT
+  recorded_at: Thu, 23 Jan 2020 09:15:43 GMT
 - request:
     method: get
     uri: https://api.github.com/users/GustavoCaso
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
       Accept:
       - application/vnd.github.everest-preview+json
-      Connection:
-      - close
-      Host:
-      - api.github.com
       User-Agent:
-      - http.rb/4.3.0
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 21 Jan 2020 08:38:00 GMT
+      - Thu, 23 Jan 2020 09:15:43 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Content-Length:
-      - '1270'
-      Connection:
-      - close
+      Transfer-Encoding:
+      - chunked
       Server:
       - GitHub.com
       Status:
@@ -754,16 +711,16 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4961'
+      - '4937'
       X-Ratelimit-Reset:
-      - '1579598475'
+      - '1579772465'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       - Accept-Encoding
       Etag:
-      - '"80185676184c97c3710edbe8270bffbe"'
+      - W/"80185676184c97c3710edbe8270bffbe"
       Last-Modified:
       - Fri, 13 Dec 2019 12:57:29 GMT
       X-Oauth-Scopes:
@@ -771,7 +728,7 @@ http_interactions:
       X-Accepted-Oauth-Scopes:
       - ''
       X-Github-Media-Type:
-      - github.everest-preview; format=json
+      - github.v3; param=everest-preview; format=json
       Access-Control-Expose-Headers:
       - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
         X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
@@ -791,42 +748,38 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - DAE0:1A475:BD756A:E0F173:5E26B868
+      - C79F:2BB14:3759625:4255439:5E29643F
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"login":"GustavoCaso","id":4672858,"node_id":"MDQ6VXNlcjQ2NzI4NTg=","avatar_url":"https://avatars3.githubusercontent.com/u/4672858?v=4","gravatar_id":"","url":"https://api.github.com/users/GustavoCaso","html_url":"https://github.com/GustavoCaso","followers_url":"https://api.github.com/users/GustavoCaso/followers","following_url":"https://api.github.com/users/GustavoCaso/following{/other_user}","gists_url":"https://api.github.com/users/GustavoCaso/gists{/gist_id}","starred_url":"https://api.github.com/users/GustavoCaso/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/GustavoCaso/subscriptions","organizations_url":"https://api.github.com/users/GustavoCaso/orgs","repos_url":"https://api.github.com/users/GustavoCaso/repos","events_url":"https://api.github.com/users/GustavoCaso/events{/privacy}","received_events_url":"https://api.github.com/users/GustavoCaso/received_events","type":"User","site_admin":false,"name":"Gustavo
         Caso","company":"@Shopify ","blog":"http://gustavocaso.github.io/","location":"Montreal","email":"gustavocaso@gmail.com","hireable":null,"bio":"Core
         team member at @github-login.","public_repos":94,"public_gists":13,"followers":61,"following":31,"created_at":"2013-06-11T18:21:37Z","updated_at":"2019-12-13T12:57:29Z"}'
     http_version: 
-  recorded_at: Tue, 21 Jan 2020 08:38:00 GMT
+  recorded_at: Thu, 23 Jan 2020 09:15:43 GMT
 - request:
     method: get
     uri: https://api.github.com/users/ianwhite
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
       Accept:
       - application/vnd.github.everest-preview+json
-      Connection:
-      - close
-      Host:
-      - api.github.com
       User-Agent:
-      - http.rb/4.3.0
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 21 Jan 2020 08:38:01 GMT
+      - Thu, 23 Jan 2020 09:15:44 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Content-Length:
-      - '1199'
-      Connection:
-      - close
+      Transfer-Encoding:
+      - chunked
       Server:
       - GitHub.com
       Status:
@@ -834,24 +787,24 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4960'
+      - '4936'
       X-Ratelimit-Reset:
-      - '1579598475'
+      - '1579772466'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       - Accept-Encoding
       Etag:
-      - '"c840eed8ebf4c774ad20038fcd5a96c8"'
+      - W/"0d55fc4df2f17dfd6ce6812b2a03044f"
       Last-Modified:
-      - Mon, 06 Jan 2020 22:36:05 GMT
+      - Wed, 22 Jan 2020 10:04:13 GMT
       X-Oauth-Scopes:
       - repo
       X-Accepted-Oauth-Scopes:
       - ''
       X-Github-Media-Type:
-      - github.everest-preview; format=json
+      - github.v3; param=everest-preview; format=json
       Access-Control-Expose-Headers:
       - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
         X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
@@ -871,42 +824,38 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - DAE1:F8D6:F472F1:1235C96:5E26B868
+      - C7A0:392DB:38DA806:44173D5:5E296440
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"login":"ianwhite","id":5980,"node_id":"MDQ6VXNlcjU5ODA=","avatar_url":"https://avatars3.githubusercontent.com/u/5980?v=4","gravatar_id":"","url":"https://api.github.com/users/ianwhite","html_url":"https://github.com/ianwhite","followers_url":"https://api.github.com/users/ianwhite/followers","following_url":"https://api.github.com/users/ianwhite/following{/other_user}","gists_url":"https://api.github.com/users/ianwhite/gists{/gist_id}","starred_url":"https://api.github.com/users/ianwhite/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/ianwhite/subscriptions","organizations_url":"https://api.github.com/users/ianwhite/orgs","repos_url":"https://api.github.com/users/ianwhite/repos","events_url":"https://api.github.com/users/ianwhite/events{/privacy}","received_events_url":"https://api.github.com/users/ianwhite/received_events","type":"User","site_admin":false,"name":"Ian
         White","company":"i2w development","blog":"http://twitter.com/i2w","location":"Sheffield,
-        UK","email":"ian.w.white@gmail.com","hireable":null,"bio":null,"public_repos":61,"public_gists":19,"followers":91,"following":10,"created_at":"2008-04-09T08:00:10Z","updated_at":"2020-01-06T22:36:05Z"}'
+        UK","email":"ian.w.white@gmail.com","hireable":null,"bio":null,"public_repos":61,"public_gists":19,"followers":91,"following":10,"created_at":"2008-04-09T08:00:10Z","updated_at":"2020-01-22T10:04:13Z"}'
     http_version: 
-  recorded_at: Tue, 21 Jan 2020 08:38:01 GMT
+  recorded_at: Thu, 23 Jan 2020 09:15:44 GMT
 - request:
     method: get
     uri: https://api.github.com/users/jeremyf
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
       Accept:
       - application/vnd.github.everest-preview+json
-      Connection:
-      - close
-      Host:
-      - api.github.com
       User-Agent:
-      - http.rb/4.3.0
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 21 Jan 2020 08:38:01 GMT
+      - Thu, 23 Jan 2020 09:15:45 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Content-Length:
-      - '1205'
-      Connection:
-      - close
+      Transfer-Encoding:
+      - chunked
       Server:
       - GitHub.com
       Status:
@@ -914,16 +863,16 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4959'
+      - '4935'
       X-Ratelimit-Reset:
-      - '1579598475'
+      - '1579772466'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       - Accept-Encoding
       Etag:
-      - '"ea7c5406a1c4e4d754216fc2b1053f2c"'
+      - W/"ea7c5406a1c4e4d754216fc2b1053f2c"
       Last-Modified:
       - Thu, 19 Dec 2019 13:53:31 GMT
       X-Oauth-Scopes:
@@ -931,7 +880,7 @@ http_interactions:
       X-Accepted-Oauth-Scopes:
       - ''
       X-Github-Media-Type:
-      - github.everest-preview; format=json
+      - github.v3; param=everest-preview; format=json
       Access-Control-Expose-Headers:
       - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
         X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
@@ -951,42 +900,38 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - DAE2:F8D2:759281:8BBC18:5E26B869
+      - C7A1:2BB13:2B26396:33BAF71:5E296440
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"login":"jeremyf","id":2130,"node_id":"MDQ6VXNlcjIxMzA=","avatar_url":"https://avatars2.githubusercontent.com/u/2130?v=4","gravatar_id":"","url":"https://api.github.com/users/jeremyf","html_url":"https://github.com/jeremyf","followers_url":"https://api.github.com/users/jeremyf/followers","following_url":"https://api.github.com/users/jeremyf/following{/other_user}","gists_url":"https://api.github.com/users/jeremyf/gists{/gist_id}","starred_url":"https://api.github.com/users/jeremyf/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/jeremyf/subscriptions","organizations_url":"https://api.github.com/users/jeremyf/orgs","repos_url":"https://api.github.com/users/jeremyf/repos","events_url":"https://api.github.com/users/jeremyf/events{/privacy}","received_events_url":"https://api.github.com/users/jeremyf/received_events","type":"User","site_admin":false,"name":"Jeremy
         Friesen","company":"http://library.nd.edu","blog":"http://takeonrules.com","location":"Goshen,
         IN USA","email":"jeremy.n.friesen@gmail.com","hireable":null,"bio":null,"public_repos":221,"public_gists":89,"followers":57,"following":18,"created_at":"2008-03-04T13:39:19Z","updated_at":"2019-12-19T13:53:31Z"}'
     http_version: 
-  recorded_at: Tue, 21 Jan 2020 08:38:01 GMT
+  recorded_at: Thu, 23 Jan 2020 09:15:45 GMT
 - request:
     method: get
     uri: https://api.github.com/users/jodosha
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
       Accept:
       - application/vnd.github.everest-preview+json
-      Connection:
-      - close
-      Host:
-      - api.github.com
       User-Agent:
-      - http.rb/4.3.0
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 21 Jan 2020 08:38:02 GMT
+      - Thu, 23 Jan 2020 09:15:45 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Content-Length:
-      - '1257'
-      Connection:
-      - close
+      Transfer-Encoding:
+      - chunked
       Server:
       - GitHub.com
       Status:
@@ -994,16 +939,16 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4958'
+      - '4934'
       X-Ratelimit-Reset:
-      - '1579598475'
+      - '1579772465'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       - Accept-Encoding
       Etag:
-      - '"9d69227b36e5e1af56a77e4d664025da"'
+      - W/"9d69227b36e5e1af56a77e4d664025da"
       Last-Modified:
       - Mon, 20 Jan 2020 17:42:40 GMT
       X-Oauth-Scopes:
@@ -1011,7 +956,7 @@ http_interactions:
       X-Accepted-Oauth-Scopes:
       - ''
       X-Github-Media-Type:
-      - github.everest-preview; format=json
+      - github.v3; param=everest-preview; format=json
       Access-Control-Expose-Headers:
       - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
         X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
@@ -1031,43 +976,39 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - DAE3:20DA8:103D7FF:134543E:5E26B869
+      - C7A2:3B0B6:ECE794:11AC7DD:5E296441
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"login":"jodosha","id":5089,"node_id":"MDQ6VXNlcjUwODk=","avatar_url":"https://avatars1.githubusercontent.com/u/5089?v=4","gravatar_id":"","url":"https://api.github.com/users/jodosha","html_url":"https://github.com/jodosha","followers_url":"https://api.github.com/users/jodosha/followers","following_url":"https://api.github.com/users/jodosha/following{/other_user}","gists_url":"https://api.github.com/users/jodosha/gists{/gist_id}","starred_url":"https://api.github.com/users/jodosha/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/jodosha/subscriptions","organizations_url":"https://api.github.com/users/jodosha/orgs","repos_url":"https://api.github.com/users/jodosha/repos","events_url":"https://api.github.com/users/jodosha/events{/privacy}","received_events_url":"https://api.github.com/users/jodosha/received_events","type":"User","site_admin":false,"name":"Luca
         Guidi","company":"Senior Software Engineer at @toptal ","blog":"https://lucaguidi.com","location":"Rome,
         Italy","email":"me@lucaguidi.com","hireable":true,"bio":"Indie OSS developer,
         author of @hanami and @redis-store.","public_repos":118,"public_gists":134,"followers":690,"following":0,"created_at":"2008-04-04T16:17:38Z","updated_at":"2020-01-20T17:42:40Z"}'
     http_version: 
-  recorded_at: Tue, 21 Jan 2020 08:38:02 GMT
+  recorded_at: Thu, 23 Jan 2020 09:15:45 GMT
 - request:
     method: get
     uri: https://api.github.com/users/marshall-lee
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
       Accept:
       - application/vnd.github.everest-preview+json
-      Connection:
-      - close
-      Host:
-      - api.github.com
       User-Agent:
-      - http.rb/4.3.0
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 21 Jan 2020 08:38:02 GMT
+      - Thu, 23 Jan 2020 09:15:45 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Content-Length:
-      - '1233'
-      Connection:
-      - close
+      Transfer-Encoding:
+      - chunked
       Server:
       - GitHub.com
       Status:
@@ -1075,16 +1016,16 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4957'
+      - '4933'
       X-Ratelimit-Reset:
-      - '1579598475'
+      - '1579772465'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       - Accept-Encoding
       Etag:
-      - '"e07a248b723bd5c33c04a8b0e323b4f0"'
+      - W/"e07a248b723bd5c33c04a8b0e323b4f0"
       Last-Modified:
       - Fri, 17 Jan 2020 14:37:33 GMT
       X-Oauth-Scopes:
@@ -1092,7 +1033,7 @@ http_interactions:
       X-Accepted-Oauth-Scopes:
       - ''
       X-Github-Media-Type:
-      - github.everest-preview; format=json
+      - github.v3; param=everest-preview; format=json
       Access-Control-Expose-Headers:
       - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
         X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
@@ -1112,41 +1053,37 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - DAE4:1A474:79271E:8FB9CE:5E26B86A
+      - C7A5:3EC98:2A95A42:33070DB:5E296441
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"login":"marshall-lee","id":3194530,"node_id":"MDQ6VXNlcjMxOTQ1MzA=","avatar_url":"https://avatars0.githubusercontent.com/u/3194530?v=4","gravatar_id":"","url":"https://api.github.com/users/marshall-lee","html_url":"https://github.com/marshall-lee","followers_url":"https://api.github.com/users/marshall-lee/followers","following_url":"https://api.github.com/users/marshall-lee/following{/other_user}","gists_url":"https://api.github.com/users/marshall-lee/gists{/gist_id}","starred_url":"https://api.github.com/users/marshall-lee/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/marshall-lee/subscriptions","organizations_url":"https://api.github.com/users/marshall-lee/orgs","repos_url":"https://api.github.com/users/marshall-lee/repos","events_url":"https://api.github.com/users/marshall-lee/events{/privacy}","received_events_url":"https://api.github.com/users/marshall-lee/received_events","type":"User","site_admin":false,"name":"Vladimir
         Kochnev","company":"@evilmartians ","blog":"","location":"Russia, Saint Petersburg","email":null,"hireable":null,"bio":null,"public_repos":146,"public_gists":27,"followers":74,"following":1,"created_at":"2013-01-05T19:27:03Z","updated_at":"2020-01-17T14:37:33Z"}'
     http_version: 
-  recorded_at: Tue, 21 Jan 2020 08:38:02 GMT
+  recorded_at: Thu, 23 Jan 2020 09:15:45 GMT
 - request:
     method: get
     uri: https://api.github.com/users/Morozzzko
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
       Accept:
       - application/vnd.github.everest-preview+json
-      Connection:
-      - close
-      Host:
-      - api.github.com
       User-Agent:
-      - http.rb/4.3.0
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 21 Jan 2020 08:38:02 GMT
+      - Thu, 23 Jan 2020 09:15:46 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Content-Length:
-      - '1219'
-      Connection:
-      - close
+      Transfer-Encoding:
+      - chunked
       Server:
       - GitHub.com
       Status:
@@ -1154,24 +1091,24 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4956'
+      - '4932'
       X-Ratelimit-Reset:
-      - '1579598474'
+      - '1579772466'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       - Accept-Encoding
       Etag:
-      - '"4a7389acc0aed8a71b7923e786576a61"'
+      - W/"794ac295acb9b320a3dfa6a1f9b79829"
       Last-Modified:
-      - Tue, 14 Jan 2020 18:07:05 GMT
+      - Tue, 21 Jan 2020 12:12:56 GMT
       X-Oauth-Scopes:
       - repo
       X-Accepted-Oauth-Scopes:
       - ''
       X-Github-Media-Type:
-      - github.everest-preview; format=json
+      - github.v3; param=everest-preview; format=json
       Access-Control-Expose-Headers:
       - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
         X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
@@ -1191,42 +1128,38 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - DAE5:20DA7:BF6970:E3D594:5E26B86A
+      - C7A6:24C73:371BFD2:422BDB4:5E296442
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"login":"Morozzzko","id":887264,"node_id":"MDQ6VXNlcjg4NzI2NA==","avatar_url":"https://avatars2.githubusercontent.com/u/887264?v=4","gravatar_id":"","url":"https://api.github.com/users/Morozzzko","html_url":"https://github.com/Morozzzko","followers_url":"https://api.github.com/users/Morozzzko/followers","following_url":"https://api.github.com/users/Morozzzko/following{/other_user}","gists_url":"https://api.github.com/users/Morozzzko/gists{/gist_id}","starred_url":"https://api.github.com/users/Morozzzko/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Morozzzko/subscriptions","organizations_url":"https://api.github.com/users/Morozzzko/orgs","repos_url":"https://api.github.com/users/Morozzzko/repos","events_url":"https://api.github.com/users/Morozzzko/events{/privacy}","received_events_url":"https://api.github.com/users/Morozzzko/received_events","type":"User","site_admin":false,"name":"Igor
         S. Morozov","company":null,"blog":"https://www.morozov.is/","location":"Zelenograd,
-        Moscow, Russia","email":"igor@morozov.is","hireable":null,"bio":null,"public_repos":38,"public_gists":8,"followers":37,"following":15,"created_at":"2011-06-30T19:56:34Z","updated_at":"2020-01-14T18:07:05Z"}'
+        Moscow, Russia","email":"igor@morozov.is","hireable":null,"bio":null,"public_repos":38,"public_gists":8,"followers":37,"following":15,"created_at":"2011-06-30T19:56:34Z","updated_at":"2020-01-21T12:12:56Z"}'
     http_version: 
-  recorded_at: Tue, 21 Jan 2020 08:38:02 GMT
+  recorded_at: Thu, 23 Jan 2020 09:15:46 GMT
 - request:
     method: get
     uri: https://api.github.com/users/nepalez
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
       Accept:
       - application/vnd.github.everest-preview+json
-      Connection:
-      - close
-      Host:
-      - api.github.com
       User-Agent:
-      - http.rb/4.3.0
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 21 Jan 2020 08:38:03 GMT
+      - Thu, 23 Jan 2020 09:15:46 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Content-Length:
-      - '1178'
-      Connection:
-      - close
+      Transfer-Encoding:
+      - chunked
       Server:
       - GitHub.com
       Status:
@@ -1234,24 +1167,24 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4955'
+      - '4931'
       X-Ratelimit-Reset:
-      - '1579598475'
+      - '1579772465'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       - Accept-Encoding
       Etag:
-      - '"527312b3a7835ad93d5e1c1aa2b504cd"'
+      - W/"a5cdad8c67b94af4b310fb9d6a95b074"
       Last-Modified:
-      - Wed, 25 Dec 2019 16:47:40 GMT
+      - Wed, 22 Jan 2020 22:41:59 GMT
       X-Oauth-Scopes:
       - repo
       X-Accepted-Oauth-Scopes:
       - ''
       X-Github-Media-Type:
-      - github.everest-preview; format=json
+      - github.v3; param=everest-preview; format=json
       Access-Control-Expose-Headers:
       - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
         X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
@@ -1271,41 +1204,37 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - DAE6:F8D3:B94A82:DC4655:5E26B86A
+      - C7A8:392D9:2BBC12B:346AB9B:5E296442
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"login":"nepalez","id":1526628,"node_id":"MDQ6VXNlcjE1MjY2Mjg=","avatar_url":"https://avatars2.githubusercontent.com/u/1526628?v=4","gravatar_id":"","url":"https://api.github.com/users/nepalez","html_url":"https://github.com/nepalez","followers_url":"https://api.github.com/users/nepalez/followers","following_url":"https://api.github.com/users/nepalez/following{/other_user}","gists_url":"https://api.github.com/users/nepalez/gists{/gist_id}","starred_url":"https://api.github.com/users/nepalez/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/nepalez/subscriptions","organizations_url":"https://api.github.com/users/nepalez/orgs","repos_url":"https://api.github.com/users/nepalez/repos","events_url":"https://api.github.com/users/nepalez/events{/privacy}","received_events_url":"https://api.github.com/users/nepalez/received_events","type":"User","site_admin":false,"name":"Andrew
-        Kozin","company":"Evil Martians","blog":"","location":"Moscow, Russia","email":"andrew.kozin@gmail.com","hireable":null,"bio":null,"public_repos":59,"public_gists":13,"followers":75,"following":96,"created_at":"2012-03-11T20:48:03Z","updated_at":"2019-12-25T16:47:40Z"}'
+        Kozin","company":"Evil Martians","blog":"","location":"Moscow, Russia","email":"andrew.kozin@gmail.com","hireable":null,"bio":null,"public_repos":59,"public_gists":13,"followers":75,"following":96,"created_at":"2012-03-11T20:48:03Z","updated_at":"2020-01-22T22:41:59Z"}'
     http_version: 
-  recorded_at: Tue, 21 Jan 2020 08:38:03 GMT
+  recorded_at: Thu, 23 Jan 2020 09:15:46 GMT
 - request:
     method: get
     uri: https://api.github.com/users/rom-bot
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
       Accept:
       - application/vnd.github.everest-preview+json
-      Connection:
-      - close
-      Host:
-      - api.github.com
       User-Agent:
-      - http.rb/4.3.0
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 21 Jan 2020 08:38:03 GMT
+      - Thu, 23 Jan 2020 09:15:46 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Content-Length:
-      - '1156'
-      Connection:
-      - close
+      Transfer-Encoding:
+      - chunked
       Server:
       - GitHub.com
       Status:
@@ -1313,16 +1242,16 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4954'
+      - '4930'
       X-Ratelimit-Reset:
-      - '1579598475'
+      - '1579772465'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       - Accept-Encoding
       Etag:
-      - '"9627b370b3e0323aa72dcd1454042b7e"'
+      - W/"9627b370b3e0323aa72dcd1454042b7e"
       Last-Modified:
       - Sat, 18 Jan 2020 14:55:52 GMT
       X-Oauth-Scopes:
@@ -1330,7 +1259,7 @@ http_interactions:
       X-Accepted-Oauth-Scopes:
       - ''
       X-Github-Media-Type:
-      - github.everest-preview; format=json
+      - github.v3; param=everest-preview; format=json
       Access-Control-Expose-Headers:
       - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
         X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
@@ -1350,41 +1279,37 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - DAE7:9B8C:B6C618:D9C1AB:5E26B86B
+      - C7A9:2BB14:3759C4F:4255B9F:5E296442
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"login":"rom-bot","id":56911883,"node_id":"MDQ6VXNlcjU2OTExODgz","avatar_url":"https://avatars2.githubusercontent.com/u/56911883?v=4","gravatar_id":"","url":"https://api.github.com/users/rom-bot","html_url":"https://github.com/rom-bot","followers_url":"https://api.github.com/users/rom-bot/followers","following_url":"https://api.github.com/users/rom-bot/following{/other_user}","gists_url":"https://api.github.com/users/rom-bot/gists{/gist_id}","starred_url":"https://api.github.com/users/rom-bot/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/rom-bot/subscriptions","organizations_url":"https://api.github.com/users/rom-bot/orgs","repos_url":"https://api.github.com/users/rom-bot/repos","events_url":"https://api.github.com/users/rom-bot/events{/privacy}","received_events_url":"https://api.github.com/users/rom-bot/received_events","type":"User","site_admin":false,"name":"rom-rb''s
         bot","company":"@rom-rb","blog":"https://rom-rb.org","location":null,"email":null,"hireable":null,"bio":null,"public_repos":2,"public_gists":0,"followers":0,"following":0,"created_at":"2019-10-23T07:40:34Z","updated_at":"2020-01-18T14:55:52Z"}'
     http_version: 
-  recorded_at: Tue, 21 Jan 2020 08:38:03 GMT
+  recorded_at: Thu, 23 Jan 2020 09:15:46 GMT
 - request:
     method: get
     uri: https://api.github.com/users/skryukov
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
       Accept:
       - application/vnd.github.everest-preview+json
-      Connection:
-      - close
-      Host:
-      - api.github.com
       User-Agent:
-      - http.rb/4.3.0
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 21 Jan 2020 08:38:03 GMT
+      - Thu, 23 Jan 2020 09:15:47 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Content-Length:
-      - '1163'
-      Connection:
-      - close
+      Transfer-Encoding:
+      - chunked
       Server:
       - GitHub.com
       Status:
@@ -1392,16 +1317,16 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4953'
+      - '4929'
       X-Ratelimit-Reset:
-      - '1579598474'
+      - '1579772466'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       - Accept-Encoding
       Etag:
-      - '"da65cbe7bf725ec3b9fc7e18f43c3924"'
+      - W/"da65cbe7bf725ec3b9fc7e18f43c3924"
       Last-Modified:
       - Sun, 12 Jan 2020 11:29:40 GMT
       X-Oauth-Scopes:
@@ -1409,7 +1334,7 @@ http_interactions:
       X-Accepted-Oauth-Scopes:
       - ''
       X-Github-Media-Type:
-      - github.everest-preview; format=json
+      - github.v3; param=everest-preview; format=json
       Access-Control-Expose-Headers:
       - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
         X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
@@ -1429,41 +1354,37 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - DAE8:F8D3:B94BC9:DC47D8:5E26B86B
+      - C7AA:3B0BC:1BDE05E:213D996:5E296442
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"login":"skryukov","id":23056378,"node_id":"MDQ6VXNlcjIzMDU2Mzc4","avatar_url":"https://avatars2.githubusercontent.com/u/23056378?v=4","gravatar_id":"","url":"https://api.github.com/users/skryukov","html_url":"https://github.com/skryukov","followers_url":"https://api.github.com/users/skryukov/followers","following_url":"https://api.github.com/users/skryukov/following{/other_user}","gists_url":"https://api.github.com/users/skryukov/gists{/gist_id}","starred_url":"https://api.github.com/users/skryukov/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/skryukov/subscriptions","organizations_url":"https://api.github.com/users/skryukov/orgs","repos_url":"https://api.github.com/users/skryukov/repos","events_url":"https://api.github.com/users/skryukov/events{/privacy}","received_events_url":"https://api.github.com/users/skryukov/received_events","type":"User","site_admin":false,"name":"Svyatoslav
         Kryukov","company":"@DomClick","blog":"","location":"Moscow","email":null,"hireable":null,"bio":null,"public_repos":19,"public_gists":0,"followers":3,"following":9,"created_at":"2016-10-25T14:12:54Z","updated_at":"2020-01-12T11:29:40Z"}'
     http_version: 
-  recorded_at: Tue, 21 Jan 2020 08:38:03 GMT
+  recorded_at: Thu, 23 Jan 2020 09:15:47 GMT
 - request:
     method: get
     uri: https://api.github.com/users/solnic
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
       Accept:
       - application/vnd.github.everest-preview+json
-      Connection:
-      - close
-      Host:
-      - api.github.com
       User-Agent:
-      - http.rb/4.3.0
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 21 Jan 2020 08:38:04 GMT
+      - Thu, 23 Jan 2020 09:15:47 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Content-Length:
-      - '1296'
-      Connection:
-      - close
+      Transfer-Encoding:
+      - chunked
       Server:
       - GitHub.com
       Status:
@@ -1471,24 +1392,24 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4952'
+      - '4928'
       X-Ratelimit-Reset:
-      - '1579598475'
+      - '1579772465'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       - Accept-Encoding
       Etag:
-      - '"6f585dfb893d555d14cd1e42d9efc3a6"'
+      - W/"da985f125b958d598c727c09d43ee39b"
       Last-Modified:
-      - Sun, 19 Jan 2020 12:23:22 GMT
+      - Wed, 22 Jan 2020 22:01:56 GMT
       X-Oauth-Scopes:
       - repo
       X-Accepted-Oauth-Scopes:
       - ''
       X-Github-Media-Type:
-      - github.everest-preview; format=json
+      - github.v3; param=everest-preview; format=json
       Access-Control-Expose-Headers:
       - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
         X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
@@ -1508,44 +1429,37 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - DAE9:29C49:732E32:88A28A:5E26B86C
+      - C7AC:24C71:1AAD92B:1FF30A8:5E296443
     body:
-      encoding: UTF-8
-      string: "{\"login\":\"solnic\",\"id\":1066,\"node_id\":\"MDQ6VXNlcjEwNjY=\",\"avatar_url\":\"https://avatars2.githubusercontent.com/u/1066?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/solnic\",\"html_url\":\"https://github.com/solnic\",\"followers_url\":\"https://api.github.com/users/solnic/followers\",\"following_url\":\"https://api.github.com/users/solnic/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/solnic/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/solnic/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/solnic/subscriptions\",\"organizations_url\":\"https://api.github.com/users/solnic/orgs\",\"repos_url\":\"https://api.github.com/users/solnic/repos\",\"events_url\":\"https://api.github.com/users/solnic/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/solnic/received_events\",\"type\":\"User\",\"site_admin\":false,\"name\":\"Piotr
-        Solnica\",\"company\":\"@theorem\",\"blog\":\"https://solnic.codes\",\"location\":\"Cracow,
-        Poland\",\"email\":null,\"hireable\":null,\"bio\":\"\U0001F3C6 winning hacker,
-        heavily involved with the Ruby community. Solutions Architect at @theorem.
-        Creator of @rom-rb and @github-login core team member.\",\"public_repos\":47,\"public_gists\":166,\"followers\":1042,\"following\":5,\"created_at\":\"2008-02-27T13:21:03Z\",\"updated_at\":\"2020-01-19T12:23:22Z\"}"
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJsb2dpbiI6InNvbG5pYyIsImlkIjoxMDY2LCJub2RlX2lkIjoiTURRNlZYTmxjakV3TmpZPSIsImF2YXRhcl91cmwiOiJodHRwczovL2F2YXRhcnMyLmdpdGh1YnVzZXJjb250ZW50LmNvbS91LzEwNjY/dj00IiwiZ3JhdmF0YXJfaWQiOiIiLCJ1cmwiOiJodHRwczovL2FwaS5naXRodWIuY29tL3VzZXJzL3NvbG5pYyIsImh0bWxfdXJsIjoiaHR0cHM6Ly9naXRodWIuY29tL3NvbG5pYyIsImZvbGxvd2Vyc191cmwiOiJodHRwczovL2FwaS5naXRodWIuY29tL3VzZXJzL3NvbG5pYy9mb2xsb3dlcnMiLCJmb2xsb3dpbmdfdXJsIjoiaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS91c2Vycy9zb2xuaWMvZm9sbG93aW5ney9vdGhlcl91c2VyfSIsImdpc3RzX3VybCI6Imh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vdXNlcnMvc29sbmljL2dpc3Rzey9naXN0X2lkfSIsInN0YXJyZWRfdXJsIjoiaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS91c2Vycy9zb2xuaWMvc3RhcnJlZHsvb3duZXJ9ey9yZXBvfSIsInN1YnNjcmlwdGlvbnNfdXJsIjoiaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS91c2Vycy9zb2xuaWMvc3Vic2NyaXB0aW9ucyIsIm9yZ2FuaXphdGlvbnNfdXJsIjoiaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS91c2Vycy9zb2xuaWMvb3JncyIsInJlcG9zX3VybCI6Imh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vdXNlcnMvc29sbmljL3JlcG9zIiwiZXZlbnRzX3VybCI6Imh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vdXNlcnMvc29sbmljL2V2ZW50c3svcHJpdmFjeX0iLCJyZWNlaXZlZF9ldmVudHNfdXJsIjoiaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS91c2Vycy9zb2xuaWMvcmVjZWl2ZWRfZXZlbnRzIiwidHlwZSI6IlVzZXIiLCJzaXRlX2FkbWluIjpmYWxzZSwibmFtZSI6IlBpb3RyIFNvbG5pY2EiLCJjb21wYW55IjoiQHRoZW9yZW0iLCJibG9nIjoiaHR0cHM6Ly9zb2xuaWMuY29kZXMiLCJsb2NhdGlvbiI6IkNyYWNvdywgUG9sYW5kIiwiZW1haWwiOm51bGwsImhpcmVhYmxlIjpudWxsLCJiaW8iOiLwn4+GIHdpbm5pbmcgaGFja2VyLCBoZWF2aWx5IGludm9sdmVkIHdpdGggdGhlIFJ1YnkgY29tbXVuaXR5LiBTb2x1dGlvbnMgQXJjaGl0ZWN0IGF0IEB0aGVvcmVtLiBDcmVhdG9yIG9mIEByb20tcmIgYW5kIEBnaXRodWItbG9naW4gY29yZSB0ZWFtIG1lbWJlci4iLCJwdWJsaWNfcmVwb3MiOjQ3LCJwdWJsaWNfZ2lzdHMiOjE2NiwiZm9sbG93ZXJzIjoxMDQ1LCJmb2xsb3dpbmciOjUsImNyZWF0ZWRfYXQiOiIyMDA4LTAyLTI3VDEzOjIxOjAzWiIsInVwZGF0ZWRfYXQiOiIyMDIwLTAxLTIyVDIyOjAxOjU2WiJ9
     http_version: 
-  recorded_at: Tue, 21 Jan 2020 08:38:04 GMT
+  recorded_at: Thu, 23 Jan 2020 09:15:47 GMT
 - request:
     method: get
     uri: https://api.github.com/users/timriley
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
       Accept:
       - application/vnd.github.everest-preview+json
-      Connection:
-      - close
-      Host:
-      - api.github.com
       User-Agent:
-      - http.rb/4.3.0
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 21 Jan 2020 08:38:04 GMT
+      - Thu, 23 Jan 2020 09:15:48 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Content-Length:
-      - '1284'
-      Connection:
-      - close
+      Transfer-Encoding:
+      - chunked
       Server:
       - GitHub.com
       Status:
@@ -1553,16 +1467,16 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4951'
+      - '4927'
       X-Ratelimit-Reset:
-      - '1579598475'
+      - '1579772466'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       - Accept-Encoding
       Etag:
-      - '"6c984e741f7b65d813c94447a188325c"'
+      - W/"6c984e741f7b65d813c94447a188325c"
       Last-Modified:
       - Mon, 20 Jan 2020 22:45:02 GMT
       X-Oauth-Scopes:
@@ -1570,7 +1484,7 @@ http_interactions:
       X-Accepted-Oauth-Scopes:
       - ''
       X-Github-Media-Type:
-      - github.everest-preview; format=json
+      - github.v3; param=everest-preview; format=json
       Access-Control-Expose-Headers:
       - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
         X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
@@ -1590,44 +1504,40 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - DAEA:F8D2:7595CA:8BC005:5E26B86C
+      - C7AD:3B0BC:1BDE104:213DA65:5E296443
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"login":"timriley","id":3134,"node_id":"MDQ6VXNlcjMxMzQ=","avatar_url":"https://avatars0.githubusercontent.com/u/3134?v=4","gravatar_id":"","url":"https://api.github.com/users/timriley","html_url":"https://github.com/timriley","followers_url":"https://api.github.com/users/timriley/followers","following_url":"https://api.github.com/users/timriley/following{/other_user}","gists_url":"https://api.github.com/users/timriley/gists{/gist_id}","starred_url":"https://api.github.com/users/timriley/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/timriley/subscriptions","organizations_url":"https://api.github.com/users/timriley/orgs","repos_url":"https://api.github.com/users/timriley/repos","events_url":"https://api.github.com/users/timriley/events{/privacy}","received_events_url":"https://api.github.com/users/timriley/received_events","type":"User","site_admin":false,"name":"Tim
         Riley","company":"Icelab","blog":"https://timriley.info","location":"Canberra,
         Australia","email":"tim@icelab.com.au","hireable":null,"bio":"Partner and
         developer at @icelab. Core team member of @github-login & @rom-rb. Building
         @hanami 2.0.","public_repos":30,"public_gists":53,"followers":212,"following":43,"created_at":"2008-03-15T04:47:05Z","updated_at":"2020-01-20T22:45:02Z"}'
     http_version: 
-  recorded_at: Tue, 21 Jan 2020 08:38:04 GMT
+  recorded_at: Thu, 23 Jan 2020 09:15:48 GMT
 - request:
     method: get
     uri: https://api.github.com/users/waiting-for-dev
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
       Accept:
       - application/vnd.github.everest-preview+json
-      Connection:
-      - close
-      Host:
-      - api.github.com
       User-Agent:
-      - http.rb/4.3.0
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 21 Jan 2020 08:38:04 GMT
+      - Thu, 23 Jan 2020 09:15:48 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Content-Length:
-      - '1287'
-      Connection:
-      - close
+      Transfer-Encoding:
+      - chunked
       Server:
       - GitHub.com
       Status:
@@ -1635,16 +1545,16 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4950'
+      - '4926'
       X-Ratelimit-Reset:
-      - '1579598474'
+      - '1579772465'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       - Accept-Encoding
       Etag:
-      - '"1eb3ba6d186a1e26ae47f36d733f7dda"'
+      - W/"1eb3ba6d186a1e26ae47f36d733f7dda"
       Last-Modified:
       - Thu, 16 Jan 2020 15:26:12 GMT
       X-Oauth-Scopes:
@@ -1652,7 +1562,7 @@ http_interactions:
       X-Accepted-Oauth-Scopes:
       - ''
       X-Github-Media-Type:
-      - github.everest-preview; format=json
+      - github.v3; param=everest-preview; format=json
       Access-Control-Expose-Headers:
       - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
         X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
@@ -1672,11 +1582,11 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - DAEB:20DA5:7467A8:89C832:5E26B86C
+      - C7AE:3B0B4:539274:640731:5E296444
     body:
-      encoding: UTF-8
-      string: '{"login":"waiting-for-dev","id":52650,"node_id":"MDQ6VXNlcjUyNjUw","avatar_url":"https://avatars1.githubusercontent.com/u/52650?v=4","gravatar_id":"","url":"https://api.github.com/users/waiting-for-dev","html_url":"https://github.com/waiting-for-dev","followers_url":"https://api.github.com/users/waiting-for-dev/followers","following_url":"https://api.github.com/users/waiting-for-dev/following{/other_user}","gists_url":"https://api.github.com/users/waiting-for-dev/gists{/gist_id}","starred_url":"https://api.github.com/users/waiting-for-dev/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/waiting-for-dev/subscriptions","organizations_url":"https://api.github.com/users/waiting-for-dev/orgs","repos_url":"https://api.github.com/users/waiting-for-dev/repos","events_url":"https://api.github.com/users/waiting-for-dev/events{/privacy}","received_events_url":"https://api.github.com/users/waiting-for-dev/received_events","type":"User","site_admin":false,"name":"Marc
-        Busqué","company":"La Marciana","blog":"http://waiting-for-dev.github.io","location":"Barcelona","email":"marc@lamarciana.com","hireable":true,"bio":null,"public_repos":52,"public_gists":10,"followers":51,"following":3,"created_at":"2009-02-07T21:29:52Z","updated_at":"2020-01-16T15:26:12Z"}'
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJsb2dpbiI6IndhaXRpbmctZm9yLWRldiIsImlkIjo1MjY1MCwibm9kZV9pZCI6Ik1EUTZWWE5sY2pVeU5qVXciLCJhdmF0YXJfdXJsIjoiaHR0cHM6Ly9hdmF0YXJzMS5naXRodWJ1c2VyY29udGVudC5jb20vdS81MjY1MD92PTQiLCJncmF2YXRhcl9pZCI6IiIsInVybCI6Imh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vdXNlcnMvd2FpdGluZy1mb3ItZGV2IiwiaHRtbF91cmwiOiJodHRwczovL2dpdGh1Yi5jb20vd2FpdGluZy1mb3ItZGV2IiwiZm9sbG93ZXJzX3VybCI6Imh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vdXNlcnMvd2FpdGluZy1mb3ItZGV2L2ZvbGxvd2VycyIsImZvbGxvd2luZ191cmwiOiJodHRwczovL2FwaS5naXRodWIuY29tL3VzZXJzL3dhaXRpbmctZm9yLWRldi9mb2xsb3dpbmd7L290aGVyX3VzZXJ9IiwiZ2lzdHNfdXJsIjoiaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS91c2Vycy93YWl0aW5nLWZvci1kZXYvZ2lzdHN7L2dpc3RfaWR9Iiwic3RhcnJlZF91cmwiOiJodHRwczovL2FwaS5naXRodWIuY29tL3VzZXJzL3dhaXRpbmctZm9yLWRldi9zdGFycmVkey9vd25lcn17L3JlcG99Iiwic3Vic2NyaXB0aW9uc191cmwiOiJodHRwczovL2FwaS5naXRodWIuY29tL3VzZXJzL3dhaXRpbmctZm9yLWRldi9zdWJzY3JpcHRpb25zIiwib3JnYW5pemF0aW9uc191cmwiOiJodHRwczovL2FwaS5naXRodWIuY29tL3VzZXJzL3dhaXRpbmctZm9yLWRldi9vcmdzIiwicmVwb3NfdXJsIjoiaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS91c2Vycy93YWl0aW5nLWZvci1kZXYvcmVwb3MiLCJldmVudHNfdXJsIjoiaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS91c2Vycy93YWl0aW5nLWZvci1kZXYvZXZlbnRzey9wcml2YWN5fSIsInJlY2VpdmVkX2V2ZW50c191cmwiOiJodHRwczovL2FwaS5naXRodWIuY29tL3VzZXJzL3dhaXRpbmctZm9yLWRldi9yZWNlaXZlZF9ldmVudHMiLCJ0eXBlIjoiVXNlciIsInNpdGVfYWRtaW4iOmZhbHNlLCJuYW1lIjoiTWFyYyBCdXNxdcOpIiwiY29tcGFueSI6IkxhIE1hcmNpYW5hIiwiYmxvZyI6Imh0dHA6Ly93YWl0aW5nLWZvci1kZXYuZ2l0aHViLmlvIiwibG9jYXRpb24iOiJCYXJjZWxvbmEiLCJlbWFpbCI6Im1hcmNAbGFtYXJjaWFuYS5jb20iLCJoaXJlYWJsZSI6dHJ1ZSwiYmlvIjpudWxsLCJwdWJsaWNfcmVwb3MiOjUyLCJwdWJsaWNfZ2lzdHMiOjEwLCJmb2xsb3dlcnMiOjUxLCJmb2xsb3dpbmciOjMsImNyZWF0ZWRfYXQiOiIyMDA5LTAyLTA3VDIxOjI5OjUyWiIsInVwZGF0ZWRfYXQiOiIyMDIwLTAxLTE2VDE1OjI2OjEyWiJ9
     http_version: 
-  recorded_at: Tue, 21 Jan 2020 08:38:04 GMT
+  recorded_at: Thu, 23 Jan 2020 09:15:48 GMT
 recorded_with: VCR 5.0.0

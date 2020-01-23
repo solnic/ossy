@@ -2,7 +2,7 @@
 
 require 'ossy/import'
 
-require 'http'
+require 'faraday'
 require 'json'
 
 module Ossy
@@ -16,7 +16,7 @@ module Ossy
         path = "orgs/#{org}/teams/#{team}/memberships/#{username}"
         resp = get(path)
 
-        return false unless resp.code.equal?(200)
+        return false unless resp.status.equal?(200)
 
         json = JSON.parse(resp.body)
 
@@ -27,14 +27,14 @@ module Ossy
         path = "repos/#{repo}/git/ref/tags/#{tag}"
         resp = get(path)
 
-        return false unless resp.code.equal?(200)
+        return false unless resp.status.equal?(200)
 
         sha = JSON.parse(resp.body)['object']['sha']
 
         path = "repos/#{repo}/git/tags/#{sha}"
         resp = get(path)
 
-        return false unless resp.code.equal?(200)
+        return false unless resp.status.equal?(200)
 
         json = JSON.parse(resp.body)
 
@@ -45,7 +45,7 @@ module Ossy
         path = "orgs/#{org}/members"
         resp = get(path)
 
-        return nil unless resp.code.equal?(200)
+        return nil unless resp.status.equal?(200)
 
         user = JSON.parse(resp.body)
           .map { |member| user(member['login']) }
@@ -58,13 +58,13 @@ module Ossy
         path = "users/#{login}"
         resp = get(path)
 
-        return nil unless resp.code.equal?(200)
+        return nil unless resp.status.equal?(200)
 
         JSON.parse(resp.body)
       end
 
       def request(meth, path, opts = {})
-        http.public_send(meth, url(path), opts)
+        http.public_send(meth, path, opts)
       end
 
       def get(path, opts = {})
@@ -72,17 +72,18 @@ module Ossy
       end
 
       def post(path, input)
-        request(:post, path, json: input)
-      end
-
-      def url(path)
-        "#{BASE_URL}/#{path}"
+        request(:post, path, JSON.dump(input))
       end
 
       def http
-        HTTP
-          .headers('Accept': 'application/vnd.github.everest-preview+json')
-          .basic_auth(user: settings.github_login, pass: settings.github_token)
+        @http ||= Faraday.new(url: BASE_URL, headers: headers) do |conn|
+          conn.basic_auth(settings.github_login, settings.github_token)
+        end
+      end
+
+      def headers
+       { 'Content-Type' => 'application/json',
+         'Accept' => 'application/vnd.github.everest-preview+json' }
       end
     end
   end

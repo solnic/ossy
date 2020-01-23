@@ -23,7 +23,7 @@ module Ossy
 
           result = workflow.(repo, name, JSON.load(payload))
 
-          if result.code.eql?(204)
+          if result.status.eql?(204)
             puts 'Success!'
           else
             puts "Failure! #{result.inspect}"

@@ -1,3 +1,13 @@
+## 0.1.2 2020-01-23
+
+### Fixed
+
+- `ossy` executable no longer requires bundler/setup (@solnic)"
+
+### Changed
+
+- Bump dep on dry-cli to >= 0.5.1 which fixed missing `set` require (@solnic)
+
 ## 0.1.1 2020-01-22
 
 ### Changed

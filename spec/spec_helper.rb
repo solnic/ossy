@@ -8,6 +8,7 @@ require "ossy/container"
 # Ossy::Container.finalize!(freeze: false)
 
 SPEC_ROOT = Pathname(__FILE__).dirname
+FIXTURES_ROOT = SPEC_ROOT.join("fixtures")
 
 require "vcr"
 

@@ -1,7 +1,8 @@
 # this file is managed by dry-rb/devtools project
 
 AllCops:
-  TargetRubyVersion: 2.4
+  TargetRubyVersion: 2.7
+  NewCops: disable
 
 Style/StringLiterals:
   Enabled: true
@@ -23,9 +24,6 @@ Style/ConditionalAssignment:
 Style/ClassAndModuleChildren:
   Exclude:
     - "spec/**/*_spec.rb"
-
-Style/EachWithObject:
-  Enabled: false
 
 Style/ParallelAssignment:
   Enabled: false
@@ -74,6 +72,9 @@ Layout/MultilineMethodCallIndentation:
 
 Layout/FirstArrayElementIndentation:
   EnforcedStyle: consistent
+
+Naming/VariableNumber:
+  Enabled: false
 
 Naming/PredicateName:
   Enabled: false

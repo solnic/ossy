@@ -23,7 +23,7 @@ jobs:
       - name: Set up Ruby
         uses: eregon/use-ruby-action@master
         with:
-          ruby-version: 2.6
+          ruby-version: 2.7
       - name: Install latest bundler
         run: |
           gem install bundler

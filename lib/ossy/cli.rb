@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require 'dry/cli'
-require 'ossy/cli/commands'
+require "dry/cli"
+require "ossy/cli/commands"
 
 module Ossy
   module CLI

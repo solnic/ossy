@@ -5,7 +5,7 @@ AllCops:
 
 Style/StringLiterals:
   Enabled: true
-  EnforcedStyle: single_quotes
+  EnforcedStyle: double_quotes
 
 Style/AccessModifierDeclarations:
   Enabled: false
@@ -58,7 +58,7 @@ Style/IfUnlessModifier:
 Style/EachWithObject:
   Enabled: false
 
-Lint/HandleExceptions:
+Lint/SuppressedException:
   Exclude:
     - "spec/spec_helper.rb"
 
@@ -72,7 +72,7 @@ Layout/MultilineMethodCallIndentation:
   Enabled: true
   EnforcedStyle: indented
 
-Layout/IndentFirstArrayElement:
+Layout/FirstArrayElementIndentation:
   EnforcedStyle: consistent
 
 Naming/PredicateName:
@@ -88,7 +88,7 @@ Naming/MethodName:
 Naming/MemoizedInstanceVariableName:
   Enabled: false
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 100
 
 Metrics/MethodLength:

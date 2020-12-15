@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
-require 'ossy/import'
+require "ossy/import"
 
-require 'faraday'
-require 'json'
+require "faraday"
+require "json"
 
 module Ossy
   module Github
     class Client
       include Import[:settings]
 
-      BASE_URL = 'https://api.github.com'
+      BASE_URL = "https://api.github.com"
 
       def membership?(username, org:, team:)
         path = "orgs/#{org}/teams/#{team}/memberships/#{username}"
@@ -20,7 +20,7 @@ module Ossy
 
         json = JSON.parse(resp.body)
 
-        json['state'].eql?('active')
+        json["state"].eql?("active")
       end
 
       def tagger(repo:, tag:)
@@ -29,7 +29,7 @@ module Ossy
 
         return false unless resp.status.equal?(200)
 
-        sha = JSON.parse(resp.body)['object']['sha']
+        sha = JSON.parse(resp.body)["object"]["sha"]
 
         path = "repos/#{repo}/git/tags/#{sha}"
         resp = get(path)
@@ -38,7 +38,7 @@ module Ossy
 
         json = JSON.parse(resp.body)
 
-        { tagger: json['tagger'], verified: json['verification']['verified'] }
+        { tagger: json["tagger"], verified: json["verification"]["verified"] }
       end
 
       def member(name, org:)
@@ -47,11 +47,9 @@ module Ossy
 
         return nil unless resp.status.equal?(200)
 
-        user = JSON.parse(resp.body)
-          .map { |member| user(member['login']) }
-          .detect { |user| user['name'].eql?(name) }
-
-        user
+        JSON.parse(resp.body)
+          .map { |member| user(member["login"]) }
+          .detect { |user| user["name"].eql?(name) }
       end
 
       def user(login)
@@ -82,8 +80,8 @@ module Ossy
       end
 
       def headers
-       { 'Content-Type' => 'application/json',
-         'Accept' => 'application/vnd.github.everest-preview+json' }
+        { "Content-Type" => "application/json",
+          "Accept" => "application/vnd.github.everest-preview+json" }
       end
     end
   end

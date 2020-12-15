@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require 'ossy/cli/commands/core'
-require 'ossy/import'
-require 'ossy/release'
+require "ossy/cli/commands/core"
+require "ossy/import"
+require "ossy/release"
 
-require 'yaml'
-require 'tilt'
-require 'ostruct'
+require "yaml"
+require "tilt"
+require "ostruct"
 
 module Ossy
   module CLI
@@ -23,13 +23,13 @@ module Ossy
           end
         end
 
-        desc 'Generates a changelog markdown file from a yaml config'
+        desc "Generates a changelog markdown file from a yaml config"
 
-        argument :config_path, required: true, desc: 'The path to the changelog config'
-        argument :output_path, required: true, desc: 'The path to the output md file'
-        argument :template_path, required: true, desc: 'The path to the changelog ERB template'
+        argument :config_path, required: true, desc: "The path to the changelog config"
+        argument :output_path, required: true, desc: "The path to the output md file"
+        argument :template_path, required: true, desc: "The path to the changelog ERB template"
 
-        option :data_path, required: false, desc: 'Optional path to additional data yaml file'
+        option :data_path, required: false, desc: "Optional path to additional data yaml file"
 
         def call(config_path:, output_path:, template_path:, data_path: nil)
           puts "Generating #{output_path} from #{config_path} using #{template_path}"
@@ -40,7 +40,7 @@ module Ossy
           context = Context.new(ctx_data)
 
           if data_path
-            key = File.basename(data_path).gsub('.yml', '')
+            key = File.basename(data_path).gsub(".yml", "")
             data = YAML.load_file(data_path)
 
             context.update(key => OpenStruct.new(data))

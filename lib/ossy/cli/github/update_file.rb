@@ -1,17 +1,17 @@
 # frozen_string_literal: true
 
-require 'ossy/cli/commands/core'
-require 'open-uri'
+require "ossy/cli/commands/core"
+require "open-uri"
 
 module Ossy
   module CLI
     module Github
       class UpdateFile < Commands::Core
-        desc 'Update provided file using a canonical source in another repository'
+        desc "Update provided file using a canonical source in another repository"
 
-        argument(:repo, required: true, desc: 'Source repository')
-        argument(:file, required: true, desc: 'File path ie owner/repo:path/to/file')
-        option(:branch, required: false, desc: 'Branch name', default: 'master')
+        argument(:repo, required: true, desc: "Source repository")
+        argument(:file, required: true, desc: "File path ie owner/repo:path/to/file")
+        option(:branch, required: false, desc: "Branch name", default: "master")
 
         def call(repo:, file:, branch:)
           url = "https://raw.githubusercontent.com/#{repo}/#{branch}/shared/#{file}"

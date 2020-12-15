@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'ossy/github/client'
+require "ossy/github/client"
 
 module Ossy
   module Github

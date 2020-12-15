@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require 'ossy/cli/changelogs/generate'
+require "ossy/cli/changelogs/generate"
 
-RSpec.describe Ossy::CLI::Changelogs::Generate, '#call' do
+RSpec.describe Ossy::CLI::Changelogs::Generate, "#call" do
   subject(:command) do
     Ossy::CLI::Changelogs::Generate.new
   end
@@ -14,6 +14,7 @@ RSpec.describe Ossy::CLI::Changelogs::Generate, '#call' do
   def data_path
     SPEC_ROOT.join("fixtures/project.yml")
   end
+
   def template_path
     SPEC_ROOT.join("fixtures/changelog.erb")
   end
@@ -37,7 +38,7 @@ RSpec.describe Ossy::CLI::Changelogs::Generate, '#call' do
         template_path: template_path }
     end
 
-    it 'generates CHANGELOG.md from the config yaml' do
+    it "generates CHANGELOG.md from the config yaml" do
       command.(options)
 
       expected = File.read(expected_output_path)
@@ -55,14 +56,14 @@ RSpec.describe Ossy::CLI::Changelogs::Generate, '#call' do
         data_path: data_path }
     end
 
-    it 'generates CHANGELOG.md from the config yaml with additional data' do
+    it "generates CHANGELOG.md from the config yaml with additional data" do
       command.(options)
 
       expected = File.read(expected_output_path)
       output = File.read(output_path)
 
-      expect(output).to include('test-project')
-      expect(output).to include('this is a test project')
+      expect(output).to include("test-project")
+      expect(output).to include("this is a test project")
     end
   end
 end

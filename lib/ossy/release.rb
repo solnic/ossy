@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require 'ossy/types'
-require 'ossy/struct'
+require "ossy/types"
+require "ossy/struct"
 
 module Ossy
   class Release < Ossy::Struct
@@ -12,7 +12,7 @@ module Ossy
     attribute? :added, Types::ChangeList
     attribute? :changed, Types::ChangeList
 
-    def each(&block)
+    def each
       %i[fixed added changed].each do |type|
         yield(type, self[type]) unless self[type].empty?
       end

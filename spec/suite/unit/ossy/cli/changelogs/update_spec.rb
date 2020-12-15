@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require 'ossy/cli/changelogs/update'
+require "ossy/cli/changelogs/update"
 
-RSpec.describe Ossy::CLI::Changelogs::Update, '#call' do
+RSpec.describe Ossy::CLI::Changelogs::Update, "#call" do
   subject(:command) do
     Ossy::CLI::Changelogs::Update.new
   end
@@ -23,7 +23,7 @@ RSpec.describe Ossy::CLI::Changelogs::Update, '#call' do
     FileUtils.rm(config_path)
   end
 
-  context 'with a single entry' do
+  context "with a single entry" do
     let(:message) do
       <<~YML
         fixed: "This is a fix"
@@ -32,18 +32,18 @@ RSpec.describe Ossy::CLI::Changelogs::Update, '#call' do
       YML
     end
 
-    it 'adds new entries' do
+    it "adds new entries" do
       command.(options)
 
       output = YAML.load_file(config_path)
 
-      expect(output[0]['fixed'].last).to eql('This is a fix')
-      expect(output[0]['added'].last).to eql('This is an addition')
-      expect(output[0]['changed'].last).to eql('This is a change')
+      expect(output[0]["fixed"].last).to eql("This is a fix")
+      expect(output[0]["added"].last).to eql("This is an addition")
+      expect(output[0]["changed"].last).to eql("This is a change")
     end
   end
 
-  context 'with multiple entries' do
+  context "with multiple entries" do
     let(:message) do
       <<~YML
         fixed:
@@ -55,18 +55,18 @@ RSpec.describe Ossy::CLI::Changelogs::Update, '#call' do
       YML
     end
 
-    it 'adds new entries' do
+    it "adds new entries" do
       command.(options)
 
       output = YAML.load_file(config_path)
 
-      expect(output[0]['fixed'].last).to eql('This is a fix')
-      expect(output[0]['added'].last).to eql('This is an addition')
-      expect(output[0]['changed'].last).to eql('This is a change')
+      expect(output[0]["fixed"].last).to eql("This is a fix")
+      expect(output[0]["added"].last).to eql("This is an addition")
+      expect(output[0]["changed"].last).to eql("This is a change")
     end
   end
 
-  context 'when existing version is included' do
+  context "when existing version is included" do
     let(:message) do
       <<~YML
         version: 0.1.0
@@ -76,19 +76,19 @@ RSpec.describe Ossy::CLI::Changelogs::Update, '#call' do
       YML
     end
 
-    it 'adds new entries' do
+    it "adds new entries" do
       command.(options)
 
       output = YAML.load_file(config_path)
 
-      expect(output[1]['version']).to eql('0.1.0')
-      expect(output[1]['fixed'].last).to eql('This is a fix')
-      expect(output[1]['added'].last).to eql('This is an addition')
-      expect(output[1]['changed'].last).to eql('This is a change')
+      expect(output[1]["version"]).to eql("0.1.0")
+      expect(output[1]["fixed"].last).to eql("This is a fix")
+      expect(output[1]["added"].last).to eql("This is an addition")
+      expect(output[1]["changed"].last).to eql("This is a change")
     end
   end
 
-  context 'when a new version is included' do
+  context "when a new version is included" do
     let(:message) do
       <<~YML
         version: 1.0.0
@@ -97,19 +97,19 @@ RSpec.describe Ossy::CLI::Changelogs::Update, '#call' do
       YML
     end
 
-    it 'adds new entries' do
+    it "adds new entries" do
       command.(options)
 
       output = YAML.load_file(config_path)
 
       expect(output[0].keys).to eql(Ossy::CLI::Changelogs::Update::KEYS)
 
-      expect(output[0]['version']).to eql('1.0.0')
-      expect(output[0]['fixed'].last).to eql('This is the final fix')
-      expect(output[0]['added'].last).to eql('This is the final addition')
+      expect(output[0]["version"]).to eql("1.0.0")
+      expect(output[0]["fixed"].last).to eql("This is the final fix")
+      expect(output[0]["added"].last).to eql("This is the final addition")
     end
 
-    it 'does not duplicate anything' do
+    it "does not duplicate anything" do
       command.(options)
       command.(options)
 
@@ -117,9 +117,9 @@ RSpec.describe Ossy::CLI::Changelogs::Update, '#call' do
 
       expect(output.size).to be(4)
 
-      expect(output[0]['version']).to eql('1.0.0')
-      expect(output[0]['fixed'].size).to be(1)
-      expect(output[0]['added'].size).to be(1)
+      expect(output[0]["version"]).to eql("1.0.0")
+      expect(output[0]["fixed"].size).to be(1)
+      expect(output[0]["added"].size).to be(1)
     end
   end
 end

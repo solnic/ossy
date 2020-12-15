@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'dry/struct'
+require "dry/struct"
 
 module Ossy
   class Struct < Dry::Struct

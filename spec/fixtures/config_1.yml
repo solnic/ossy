@@ -3,3 +3,6 @@ test:
   nums: [1, 2]
   data:
     foo: 'bar'
+    steps:
+    - name: first
+    - name: second

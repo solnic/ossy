@@ -8,7 +8,10 @@ RSpec.describe Ossy::CLI::Configs::Merge, "#call" do
   end
 
   let(:options) do
-    { source_path: config_path("1"), target_path: config_path("2"), output_path: output_path }
+    { source_path: config_path("1"),
+      target_path: config_path("2"),
+      output_path: output_path,
+      identifiers: { steps: "name" } }
   end
 
   def config_path(num)
@@ -20,11 +23,11 @@ RSpec.describe Ossy::CLI::Configs::Merge, "#call" do
   end
 
   after do
-    FileUtils.rm(output_path)
+    FileUtils.rm(output_path) if output_path.exist?
   end
 
   it "merges two yaml configs into a new one" do
-    command.(options)
+    command.(**options)
 
     output = YAML.load_file(output_path)
 
@@ -32,7 +35,14 @@ RSpec.describe Ossy::CLI::Configs::Merge, "#call" do
       "test" => {
         "text" => "Hello Universe",
         "nums" => [1, 2, 3, 4],
-        "data" => { "foo" => "bar", "bar" => "baz" }
+        "data" => {
+          "foo" => "bar",
+          "bar" => "baz",
+          "steps" => [
+            { "name" => "first", "tag" => "customized" },
+            { "name" => "second" }
+          ]
+        }
       }
     )
   end

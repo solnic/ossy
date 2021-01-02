@@ -11,7 +11,7 @@ RSpec.describe Ossy::CLI::Configs::Merge, "#call" do
     { source_path: config_path("1"),
       target_path: config_path("2"),
       output_path: output_path,
-      identifiers: { steps: "name" } }
+      identifiers: "steps:name" }
   end
 
   def config_path(num)

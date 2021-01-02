@@ -1,3 +1,9 @@
+## 0.2.0 2021-01-02
+
+### Added
+
+- `configs merge` now supports merging array of hashes (@solnic)
+
 ## 0.1.4 2020-01-23
 
 ### Fixed

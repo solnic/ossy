@@ -40,7 +40,8 @@ RSpec.describe Ossy::CLI::Configs::Merge, "#call" do
           "bar" => "baz",
           "steps" => [
             { "name" => "first", "tag" => "customized" },
-            { "name" => "second" }
+            { "name" => "second" },
+            { "name" => "third", "tag" => "customized" }
           ]
         }
       }

@@ -39,11 +39,20 @@ module Ossy
               deep_merge(val1, val2, identifiers, &block)
             elsif val1.is_a?(Array) && val2.is_a?(Array)
               if (id = identifiers[key])
-                (val1 + val2)
+                arr = (val1 + val2)
                   .group_by { |el| el.fetch(id) }
                   .values
                   .map { |arr| arr.size.equal?(2) ? deep_merge(*arr, identifiers) : arr }
                   .flatten(1)
+                  .uniq
+
+                arr
+                  .map
+                  .with_index { |el, idx|
+                    (after = el.delete("_after")) ?
+                      [el, arr.index(arr.detect { |a| a[id].eql?(after) }) + 1] :
+                      [el, idx]
+                  }.sort_by(&:last).map(&:first)
               else
                 (val1 + val2).uniq
               end

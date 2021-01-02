@@ -6,3 +6,6 @@ test:
     steps:
     - name: first
       tag: customized
+    - name: third
+      _after: "second"
+      tag: customized

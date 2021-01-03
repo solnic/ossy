@@ -16,6 +16,8 @@ module Ossy
       require "ossy/cli/changelogs/generate"
       require "ossy/cli/changelogs/update"
 
+      require "ossy/cli/releases/generate"
+
       require "ossy/cli/configs/merge"
 
       require "ossy/cli/templates/compile"
@@ -35,6 +37,10 @@ module Ossy
       register "changelogs", aliases: %w[ch] do |changelogs|
         changelogs.register "generate", Changelogs::Generate, aliases: %w[g]
         changelogs.register "update", Changelogs::Update, aliases: %w[u]
+      end
+
+      register "releases", aliases: %w[r] do |releases|
+        releases.register "generate", Releases::Generate, aliases: %w[g]
       end
 
       register "configs", aliases: %w[c] do |configs|

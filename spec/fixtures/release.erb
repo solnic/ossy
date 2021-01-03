@@ -1,0 +1,30 @@
+<% if latest_release.summary %>
+<%= latest_release.summary %>
+
+<% end %>
+
+<% if latest_release.added? %>
+### Added
+
+<% latest_release.added.each do |log| %>
+- <%= log %>
+<% end %>
+
+<% end %>
+<% if latest_release.fixed? %>
+### Fixed
+
+<% latest_release.fixed.each do |log| %>
+- <%= log %>
+<% end %>
+
+<% end %>
+<% if latest_release.changed? %>
+### Changed
+
+<% latest_release.changed.each do |log| %>
+- <%= log %>
+<% end %>
+
+<% end %>
+Previous: <%=previous_release.version%>

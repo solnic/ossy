@@ -16,7 +16,7 @@ RSpec.describe Ossy::CLI::Releases::Generate, "#call" do
   end
 
   def template_path
-    SPEC_ROOT.join("fixtures/changelog.erb")
+    SPEC_ROOT.join("fixtures/release.erb")
   end
 
   def expected_output_path

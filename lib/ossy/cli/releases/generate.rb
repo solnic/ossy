@@ -13,7 +13,15 @@ module Ossy
     module Releases
       class Context < OpenStruct
         def self.new(data)
-          super(releases: [data.map(&Release).first])
+          super(releases: data.map(&Release))
+        end
+
+        def latest_release
+          releases.first
+        end
+
+        def previous_release
+          releases[1]
         end
 
         def update(hash)

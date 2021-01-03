@@ -1,5 +1,3 @@
-## 0.1.1 2020-01-14
-
 This is a 0.1.1 summary
 
 ### Added
@@ -14,3 +12,5 @@ This is a 0.1.1 summary
 ### Changed
 
 - Internal clean up
+
+Previous: 0.1.0

@@ -13,4 +13,4 @@ This is a 0.1.1 summary
 
 - Internal clean up
 
-Previous: 0.1.0
+Previous: test-project 0.1.0

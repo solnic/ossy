@@ -35,7 +35,8 @@ RSpec.describe Ossy::CLI::Releases::Generate, "#call" do
     let(:options) do
       { config_path: config_path,
         output_path: output_path,
-        template_path: template_path }
+        template_path: template_path,
+        data_path: data_path }
     end
 
     it "generates RELEASE-v0.1.1.md from the config yaml" do

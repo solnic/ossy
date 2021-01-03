@@ -37,6 +37,8 @@ module Ossy
         argument :output_path, required: true, desc: "The path to the output md file"
         argument :template_path, required: true, desc: "The path to the changelog ERB template"
 
+        option :data_path, required: false, desc: "Optional path to additional data yaml file"
+
         def call(config_path:, output_path:, template_path:, data_path: nil)
           puts "Generating #{output_path} from #{config_path} using #{template_path}"
 

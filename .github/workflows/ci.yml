@@ -34,3 +34,19 @@ jobs:
         run: |
           cp .env.example .env
           bundle exec rake spec
+  metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up Ruby
+        uses: eregon/use-ruby-action@master
+        with:
+          ruby-version: 2.7
+      - name: Install latest bundler
+        run: |
+          gem install bundler
+          bundle config set without 'tools benchmarks docs'
+      - name: Bundle install
+        run: bundle install --jobs 4 --retry 3
+      - name: Rubocop
+        run: bundle exec bin/ossy metrics rubocop --format github "lib/**/*.rb"

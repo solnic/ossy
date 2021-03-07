@@ -16,7 +16,7 @@ module Ossy
         argument :output_path, required: true, desc: "The path to the output file"
 
         option :identifiers, required: false, default: "",
-          desc: "Key identifier that should be used for merging arrays of hashes"
+                             desc: "Key identifier that should be used for merging arrays of hashes"
 
         def call(source_path:, target_path:, output_path:, **opts)
           puts "Merging #{source_path} + #{target_path} into #{output_path}"
@@ -49,9 +49,11 @@ module Ossy
                 arr
                   .map
                   .with_index { |el, idx|
-                    (after = el.delete("_after")) ?
-                      [el, arr.index(arr.detect { |a| a[id].eql?(after) }) + 1] :
+                    if (after = el.delete("_after"))
+                      [el, arr.index(arr.detect { |a| a[id].eql?(after) }) + 1]
+                    else
                       [el, idx]
+                    end
                   }.sort_by(&:last).map(&:first)
               else
                 (val1 + val2).uniq

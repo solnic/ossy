@@ -22,6 +22,8 @@ module Ossy
 
       require "ossy/cli/templates/compile"
 
+      require "ossy/cli/metrics/rubocop"
+
       register "github", aliases: %w[gh] do |github|
         github.register "workflow", Github::Workflow, aliases: %w[w]
         github.register "membership", Github::Membership, aliases: %w[m]
@@ -45,6 +47,10 @@ module Ossy
 
       register "configs", aliases: %w[c] do |configs|
         configs.register "merge", Configs::Merge, aliases: %w[m]
+      end
+
+      register "metrics", aliases: %w[m] do |configs|
+        configs.register "rubocop", Metrics::Rubocop, aliases: %w[rc]
       end
     end
   end

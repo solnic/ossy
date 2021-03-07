@@ -18,7 +18,7 @@ module Ossy
         KEYS = %w[version summary date fixed added changed].freeze
 
         def call(config_path:, message:)
-          attrs = YAML.load(message)
+          attrs = YAML.safe_load(message)
           target = YAML.load_file(config_path)
 
           version = attrs["version"] || target[0]["version"]

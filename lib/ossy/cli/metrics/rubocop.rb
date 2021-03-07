@@ -20,7 +20,7 @@ module Ossy
         option :format, required: true, desc: "Output format"
 
         def call(path:, **opts)
-          puts run_rubocop.(path: path, **opts)
+          run_rubocop.(path: path, **opts)
         end
       end
     end

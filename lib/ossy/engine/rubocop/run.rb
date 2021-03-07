@@ -97,18 +97,18 @@ module Ossy
         option :format, desc: "Path to file(s)"
 
         def call(path:, format: "json")
-          output = exec("rubocop #{path} --format #{format}")
+          result, output = exec("rubocop #{path} --format #{format}")
 
           case format
           when "json" then Result.build(JSON.parse(output))
           else
-            output
+            [result, output]
           end
         end
 
         def exec(cmd, opts = {})
           Open3.popen3(cmd, opts) do |_stdin, stdout, stderr, wait_thr|
-            stdout.read
+            [wait_thr.value, stdout.read]
           end
         end
       end

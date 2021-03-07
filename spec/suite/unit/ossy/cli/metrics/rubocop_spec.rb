@@ -15,7 +15,12 @@ RSpec.describe Ossy::CLI::Metrics::Rubocop, "#call" do
 
   context "running against a single file" do
     it "outputs result using provided format" do
-      expect { command.(**opts) }.to output(/bad.rb/).to_stdout
+      result, output = command.(**opts)
+
+      expect(result).to_not be_success
+
+      expect(output).to include("bad.rb")
+      expect(output).to include("Prefer double-quoted strings")
     end
   end
 end

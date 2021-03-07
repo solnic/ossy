@@ -14,6 +14,7 @@ RSpec.describe Ossy::CLI::Metrics::Rubocop, "#call" do
       result, output = command.(
         path: path,
         format: "github",
+        silence: "true",
         do_exit: "false"
       )
 
@@ -30,6 +31,7 @@ RSpec.describe Ossy::CLI::Metrics::Rubocop, "#call" do
         path: path,
         format: "html",
         args: ["--out #{output_file}"],
+        silence: "true",
         do_exit: "false"
       )
 

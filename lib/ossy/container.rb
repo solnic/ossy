@@ -7,7 +7,7 @@ require "ossy/types"
 
 module Ossy
   class Container < Dry::System::Container
-    use :env, inferrer: proc { ENV.fetch("OSSY_ENV") { "development" }.to_sym }
+    use :env, inferrer: proc { ENV.fetch("OSSY_ENV", "development").to_sym }
 
     configure do |config|
       config.root = Pathname(__dir__).join("../../")

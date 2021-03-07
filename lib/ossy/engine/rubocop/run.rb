@@ -8,43 +8,43 @@ require "ossy/struct"
 module Ossy
   module Engine
     module Rubocop
-    # {
-    #    "metadata" : {
-    #       "ruby_platform" : "x86_64-darwin20",
-    #       "ruby_version" : "2.7.2",
-    #       "ruby_engine" : "ruby",
-    #       "ruby_patchlevel" : "137",
-    #       "rubocop_version" : "1.6.1"
-    #    },
-    #    "files" : [
-    #       {
-    #          "offenses" : [],
-    #          "path" : "spec/spec_helper.rb"
-    #       }
-    #    ],
-    #    "summary" : {
-    #       "target_file_count" : 1,
-    #       "inspected_file_count" : 1,
-    #       "offense_count" : 0
-    #    }
-    # }
-    #
-    # # json["files"] element
-    # {"path"=>"spec/fixtures/rubocop/bad.rb",
-    #  "offenses"=>
-    #   [{"severity"=>"convention",
-    #     "message"=> "blablabla",
-    #     "cop_name"=>"Style/StringLiterals",
-    #     "corrected"=>false,
-    #     "correctable"=>true,
-    #     "location"=>
-    #      {"start_line"=>3,
-    #       "start_column"=>1,
-    #       "last_line"=>3,
-    #       "last_column"=>30,
-    #       "length"=>30,
-    #       "line"=>3,
-    #       "column"=>1}}]}
+      # {
+      #    "metadata" : {
+      #       "ruby_platform" : "x86_64-darwin20",
+      #       "ruby_version" : "2.7.2",
+      #       "ruby_engine" : "ruby",
+      #       "ruby_patchlevel" : "137",
+      #       "rubocop_version" : "1.6.1"
+      #    },
+      #    "files" : [
+      #       {
+      #          "offenses" : [],
+      #          "path" : "spec/spec_helper.rb"
+      #       }
+      #    ],
+      #    "summary" : {
+      #       "target_file_count" : 1,
+      #       "inspected_file_count" : 1,
+      #       "offense_count" : 0
+      #    }
+      # }
+      #
+      # # json["files"] element
+      # {"path"=>"spec/fixtures/rubocop/bad.rb",
+      #  "offenses"=>
+      #   [{"severity"=>"convention",
+      #     "message"=> "blablabla",
+      #     "cop_name"=>"Style/StringLiterals",
+      #     "corrected"=>false,
+      #     "correctable"=>true,
+      #     "location"=>
+      #      {"start_line"=>3,
+      #       "start_column"=>1,
+      #       "last_line"=>3,
+      #       "last_column"=>30,
+      #       "length"=>30,
+      #       "line"=>3,
+      #       "column"=>1}}]}
       class Result < Ossy::Struct
         attribute :summary do
           attribute :offense_count, Types::Integer
@@ -108,7 +108,7 @@ module Ossy
         end
 
         def exec(cmd, opts = {})
-          Open3.popen3(cmd, opts) do |_stdin, stdout, stderr, wait_thr|
+          Open3.popen3(cmd, opts) do |_stdin, stdout, _stderr, wait_thr|
             [wait_thr.value, stdout.read]
           end
         end

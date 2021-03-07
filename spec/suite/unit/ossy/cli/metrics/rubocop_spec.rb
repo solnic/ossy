@@ -9,13 +9,13 @@ RSpec.describe Ossy::CLI::Metrics::Rubocop, "#call" do
 
   let(:path) { FIXTURES_ROOT.join("rubocop").join("bad.rb") }
 
-  let(:opts) do
-    { path: path, format: "github" }
-  end
-
   context "running against a single file" do
     it "outputs result using provided format" do
-      result, output = command.(**opts)
+      result, output = command.(
+        path: path,
+        format: "github",
+        do_exit: "false"
+      )
 
       expect(result).to_not be_success
 
@@ -29,7 +29,8 @@ RSpec.describe Ossy::CLI::Metrics::Rubocop, "#call" do
       result, output = command.(
         path: path,
         format: "html",
-        args: ["--out #{output_file}"]
+        args: ["--out #{output_file}"],
+        do_exit: "false"
       )
 
       expect(result).to_not be_success

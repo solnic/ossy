@@ -19,8 +19,13 @@ module Ossy
         argument :path, required: true, desc: "The path to file(s)"
         option :format, required: true, desc: "Output format"
 
-        def call(path:, **opts)
-          run_rubocop.(path: path, **opts)
+        def call(path:, args: [], **opts)
+          result, output = run_rubocop.(path: path, args: args, **opts)
+
+          out = result.success? ? $stdout : $stderr
+          out.puts output
+
+          [result, output]
         end
       end
     end

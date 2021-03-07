@@ -96,8 +96,9 @@ module Ossy
         option :path, desc: "Path to file(s)"
         option :format, desc: "Path to file(s)"
 
-        def call(path:, format: "json")
-          result, output = exec("rubocop #{path} --format #{format}")
+        def call(path:, format: "json", args: [])
+          extra_opts = args.join(" ")
+          result, output = exec("rubocop #{path} --format #{format} #{extra_opts}".strip)
 
           case format
           when "json" then Result.build(JSON.parse(output))

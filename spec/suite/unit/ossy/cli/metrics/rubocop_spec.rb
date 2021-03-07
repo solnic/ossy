@@ -22,5 +22,22 @@ RSpec.describe Ossy::CLI::Metrics::Rubocop, "#call" do
       expect(output).to include("bad.rb")
       expect(output).to include("Prefer double-quoted strings")
     end
+
+    it "stores output in a file" do
+      output_file = TMP_PATH.join("rubocop.html")
+
+      result, output = command.(
+        path: path,
+        format: "html",
+        args: ["--out #{output_file}"]
+      )
+
+      expect(result).to_not be_success
+
+      output = File.read(output_file)
+
+      expect(output).to include("bad.rb")
+      expect(output).to include("Prefer double-quoted strings")
+    end
   end
 end

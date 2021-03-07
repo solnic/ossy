@@ -12,7 +12,7 @@ RSpec.describe Ossy::CLI::Github::Workflow, "#call" do
   end
 
   it "triggers a workflow", vcr: true, cassette: "gh-workflow-cli" do
-    expect { command.(options) }.to output(
+    expect { command.(**options) }.to output(
       <<~STR
         Requesting: dry-rb/testing => sync_configs
         Success!

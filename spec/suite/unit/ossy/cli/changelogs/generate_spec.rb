@@ -39,7 +39,7 @@ RSpec.describe Ossy::CLI::Changelogs::Generate, "#call" do
     end
 
     it "generates CHANGELOG.md from the config yaml" do
-      command.(options)
+      command.(**options)
 
       expected = File.read(expected_output_path)
       output = File.read(output_path)
@@ -57,9 +57,8 @@ RSpec.describe Ossy::CLI::Changelogs::Generate, "#call" do
     end
 
     it "generates CHANGELOG.md from the config yaml with additional data" do
-      command.(options)
+      command.(**options)
 
-      expected = File.read(expected_output_path)
       output = File.read(output_path)
 
       expect(output).to include("test-project")

@@ -33,7 +33,7 @@ RSpec.describe Ossy::CLI::Changelogs::Update, "#call" do
     end
 
     it "adds new entries" do
-      command.(options)
+      command.(**options)
 
       output = YAML.load_file(config_path)
 
@@ -56,7 +56,7 @@ RSpec.describe Ossy::CLI::Changelogs::Update, "#call" do
     end
 
     it "adds new entries" do
-      command.(options)
+      command.(**options)
 
       output = YAML.load_file(config_path)
 
@@ -77,7 +77,7 @@ RSpec.describe Ossy::CLI::Changelogs::Update, "#call" do
     end
 
     it "adds new entries" do
-      command.(options)
+      command.(**options)
 
       output = YAML.load_file(config_path)
 
@@ -98,7 +98,7 @@ RSpec.describe Ossy::CLI::Changelogs::Update, "#call" do
     end
 
     it "adds new entries" do
-      command.(options)
+      command.(**options)
 
       output = YAML.load_file(config_path)
 
@@ -110,8 +110,8 @@ RSpec.describe Ossy::CLI::Changelogs::Update, "#call" do
     end
 
     it "does not duplicate anything" do
-      command.(options)
-      command.(options)
+      command.(**options)
+      command.(**options)
 
       output = YAML.load_file(config_path)
 

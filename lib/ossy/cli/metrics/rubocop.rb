@@ -20,11 +20,13 @@ module Ossy
         option :format, required: true, desc: "Output format"
         option :do_exit, required: false,
                          desc: "Whether the command should exit with the same status as rubocop"
+        option :silence, required: false,
+                         desc: "Whether the rubocop output should be displayed"
 
-        def call(path:, do_exit: "true", args: [], **opts)
+        def call(path:, silence: "false", do_exit: "true", args: [], **opts)
           result, output = run_rubocop.(path: path, args: args, **opts)
 
-          warn output unless result.success?
+          warn output if silence.eql?("false") && !result.success?
 
           exit(result.exitstatus) if do_exit.eql?("true")
 

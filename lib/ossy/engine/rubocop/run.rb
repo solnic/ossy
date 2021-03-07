@@ -93,10 +93,11 @@ module Ossy
       end
 
       class Run < Ossy::CLI::Commands::Core
-        argument :path, desc: "Path to file(s)"
+        option :path, desc: "Path to file(s)"
+        option :format, desc: "Path to file(s)"
 
-        def call(path)
-          json = JSON.parse(exec("rubocop #{path} --format json"))
+        def call(path:, format: "json")
+          json = JSON.parse(exec("rubocop #{path} --format #{format}"))
           Result.build(json)
         end
 

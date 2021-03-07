@@ -6,14 +6,14 @@ RSpec.describe Ossy::Engine::Rubocop::Run, "#call" do
   subject(:command) { Ossy::Engine::Rubocop::Run.new }
 
   it "returns succesful result" do
-    result = command.(FIXTURES_ROOT.join("rubocop").join("good.rb"))
+    result = command.(path: FIXTURES_ROOT.join("rubocop").join("good.rb"))
 
     expect(result).to be_success
     expect(result.summary.offense_count).to be(0)
   end
 
   it "returns failure result" do
-    result = command.(FIXTURES_ROOT.join("rubocop").join("bad.rb"))
+    result = command.(path: FIXTURES_ROOT.join("rubocop").join("bad.rb"))
 
     expect(result).to be_failure
     expect(result.summary.offense_count).to be(1)
@@ -30,7 +30,7 @@ RSpec.describe Ossy::Engine::Rubocop::Run, "#call" do
   end
 
   it "returns result for many files" do
-    result = command.(FIXTURES_ROOT.join("rubocop").join("*.rb"))
+    result = command.(path: FIXTURES_ROOT.join("rubocop").join("*.rb"))
 
     expect(result).to be_failure
     expect(result.summary.offense_count).to be(1)

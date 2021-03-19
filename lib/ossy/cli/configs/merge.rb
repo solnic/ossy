@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require "ossy/cli/commands/core"
-require "ossy/import"
+require "ossy/cli/import"
 
 require "yaml"
 

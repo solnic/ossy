@@ -2,7 +2,7 @@
 
 require "dry/inflector"
 require "ossy/cli/commands/core"
-require "ossy/import"
+require "ossy/cli/import"
 
 require "tilt"
 require "erb"
@@ -23,7 +23,7 @@ module Ossy
           end
         end
 
-        include Import["github.workflow"]
+        include CLI::Import["github.workflow"]
 
         desc "Compile an erb template"
 

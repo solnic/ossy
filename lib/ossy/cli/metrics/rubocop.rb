@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require "ossy/cli/commands/core"
-require "ossy/import"
+require "ossy/cli/import"
 require "ossy/release"
 
 require "yaml"
@@ -12,7 +12,7 @@ module Ossy
   module CLI
     module Metrics
       class Rubocop < Commands::Core
-        include Import[run_rubocop: "engine.rubocop.run"]
+        include CLI::Import[run_rubocop: "engine.rubocop.run"]
 
         desc "Runs rubocop"
 

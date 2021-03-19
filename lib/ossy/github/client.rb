@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "ossy/import"
+require "ossy/cli/import"
 
 require "faraday"
 require "json"
@@ -8,7 +8,7 @@ require "json"
 module Ossy
   module Github
     class Client
-      include Import[:settings]
+      include CLI::Import[:settings]
 
       BASE_URL = "https://api.github.com"
 

@@ -9,7 +9,7 @@ module Ossy
     transform_types do |type|
       if type.default?
         type.constructor do |value|
-          value.nil? ? Dry::Types::Undefined : value
+          value.nil? ? Dry::CLI::Types::Undefined : value
         end
       else
         type

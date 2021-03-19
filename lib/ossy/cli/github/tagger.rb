@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 require "ossy/cli/commands/core"
-require "ossy/import"
+require "ossy/cli/import"
 
 module Ossy
   module CLI
     module Github
       class Tagger < Commands::Core
-        include Import["github.client"]
+        include CLI::Import["github.client"]
 
         desc "Return tagger email for a verified tag"
 

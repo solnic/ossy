@@ -3,9 +3,9 @@
 require "bundler/setup"
 require "byebug"
 
-require "ossy/container"
+require "ossy/cli/container"
 
-# Ossy::Container.finalize!(freeze: false)
+# Ossy::CLI::Container.finalize!(freeze: false)
 
 SPEC_ROOT = Pathname(__FILE__).dirname
 TMP_PATH = SPEC_ROOT.join("../tmp").realpath
@@ -18,7 +18,7 @@ VCR.configure do |config|
 
   config.hook_into :webmock
 
-  settings = Ossy::Container[:settings]
+  settings = Ossy::CLI::Container[:settings]
 
   config.filter_sensitive_data("github-login") do
     settings.github_login

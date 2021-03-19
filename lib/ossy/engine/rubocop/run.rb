@@ -47,7 +47,7 @@ module Ossy
       #       "column"=>1}}]}
       class Result < Ossy::Struct
         attribute :summary do
-          attribute :offense_count, Types::Integer
+          attribute :offense_count, CLI::Types::Integer
         end
 
         def self.build(json)
@@ -71,18 +71,18 @@ module Ossy
       end
 
       class Failure < Result
-        attribute :files, Types::Array do
-          attribute :path, Types::String
-          attribute :offenses, Types::Array do
-            attribute :severity, Types::String
-            attribute :cop_name, Types::String
+        attribute :files, CLI::Types::Array do
+          attribute :path, CLI::Types::String
+          attribute :offenses, CLI::Types::Array do
+            attribute :severity, CLI::Types::String
+            attribute :cop_name, CLI::Types::String
             attribute :location do
-              attribute :start_line, Types::Integer
-              attribute :start_column, Types::Integer
-              attribute :last_line, Types::Integer
-              attribute :last_column, Types::Integer
-              attribute :line, Types::Integer
-              attribute :column, Types::Integer
+              attribute :start_line, CLI::Types::Integer
+              attribute :start_column, CLI::Types::Integer
+              attribute :last_line, CLI::Types::Integer
+              attribute :last_column, CLI::Types::Integer
+              attribute :line, CLI::Types::Integer
+              attribute :column, CLI::Types::Integer
             end
           end
         end

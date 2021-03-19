@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 require "ossy/cli/commands/core"
-require "ossy/import"
+require "ossy/cli/import"
 
 module Ossy
   module CLI
     module Github
       class Membership < Commands::Core
-        include Import["github.client"]
+        include CLI::Import["github.client"]
 
         desc "Check if a given user has an active membership in a team"
 

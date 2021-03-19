@@ -3,13 +3,13 @@
 require "json"
 
 require "ossy/cli/commands/core"
-require "ossy/import"
+require "ossy/cli/import"
 
 module Ossy
   module CLI
     module Github
       class Workflow < Commands::Core
-        include Import["github.workflow"]
+        include CLI::Import["github.workflow"]
 
         desc "Start a GitHub workflow"
 

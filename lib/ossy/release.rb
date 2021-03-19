@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
-require "ossy/types"
+require "ossy/cli/types"
 require "ossy/struct"
 
 module Ossy
   class Release < Ossy::Struct
-    attribute :version, Types::Version
-    attribute? :date, Types::ReleaseDate
-    attribute? :summary, Types::Summary
-    attribute? :fixed, Types::ChangeList
-    attribute? :added, Types::ChangeList
-    attribute? :changed, Types::ChangeList
+    attribute :version, CLI::Types::Version
+    attribute? :date, CLI::Types::ReleaseDate
+    attribute? :summary, CLI::Types::Summary
+    attribute? :fixed, CLI::Types::ChangeList
+    attribute? :added, CLI::Types::ChangeList
+    attribute? :changed, CLI::Types::ChangeList
 
     def each
       %i[fixed added changed].each do |type|

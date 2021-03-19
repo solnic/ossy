@@ -3,6 +3,7 @@
 require "open3"
 
 require "ossy/cli/commands/core"
+require "ossy/cli/types"
 require "ossy/struct"
 
 module Ossy

@@ -26,6 +26,7 @@ RSpec.describe Ossy::Engine::Rubocop::Run, "#call" do
     offense = file.offenses.first
 
     expect(offense.cop_name).to eql("Style/StringLiterals")
+    expect(offense.message).to include("Prefer double-quoted strings")
     expect(offense.location.line).to be(3)
   end
 

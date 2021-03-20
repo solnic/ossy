@@ -77,6 +77,7 @@ module Ossy
           attribute :offenses, CLI::Types::Array do
             attribute :severity, CLI::Types::String
             attribute :cop_name, CLI::Types::String
+            attribute :message, CLI::Types::String
             attribute :location do
               attribute :start_line, CLI::Types::Integer
               attribute :start_column, CLI::Types::Integer

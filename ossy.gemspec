@@ -29,7 +29,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "dry-cli", "~> 0.5", ">= 0.5.1"
   spec.add_runtime_dependency "dry-inflector", "~> 0.1", ">= 0.1.2"
   spec.add_runtime_dependency "dry-struct", "~> 1.2"
-  spec.add_runtime_dependency "dry-system", "~> 0.14"
+  spec.add_runtime_dependency "dry-system", "~> 0.18.1"
   spec.add_runtime_dependency "dry-types", "~> 1.2"
   spec.add_runtime_dependency "faraday", "~> 1.0"
   spec.add_runtime_dependency "tilt", "~> 2.0"

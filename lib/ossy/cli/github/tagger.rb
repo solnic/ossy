@@ -17,8 +17,12 @@ module Ossy
         def call(repo:, tag:)
           result = client.tagger(repo: repo, tag: tag)
 
-          if result && result[:verified].equal?(true)
-            puts result[:tagger]["name"]
+          return unless result
+
+          tagger = result[:tagger]
+
+          if tagger["email"].include?("users.noreply.github.com") || result[:verified].equal?(true)
+            puts tagger["name"]
           end
         end
       end

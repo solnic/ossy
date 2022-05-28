@@ -75,7 +75,7 @@ module Ossy
 
       def http
         @http ||= Faraday.new(url: BASE_URL, headers: headers) do |conn|
-          conn.basic_auth(settings.github_login, settings.github_token)
+          conn.request(:basic_auth, settings.github_login, settings.github_token)
         end
       end
 

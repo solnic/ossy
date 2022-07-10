@@ -29,6 +29,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "dry-cli", "~> 0.5", ">= 0.5.1"
   spec.add_runtime_dependency "dry-inflector", "~> 0.1", ">= 0.1.2"
   spec.add_runtime_dependency "dry-struct", "~> 1.2"
+  spec.add_runtime_dependency "dry-container", "~> 0.8", "<= 0.8"
   spec.add_runtime_dependency "dry-configurable", "~> 0.12", "< 0.13"
   spec.add_runtime_dependency "dry-system", "~> 0.18.1"
   spec.add_runtime_dependency "dry-types", "~> 1.2"

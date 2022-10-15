@@ -5,6 +5,7 @@ require "ossy/import"
 require "ossy/release"
 
 require "yaml"
+require "date"
 
 module Ossy
   module CLI

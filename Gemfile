@@ -6,6 +6,7 @@ gemspec
 gem "byebug"
 
 group :test do
+  gem "dotenv"
   gem "vcr", "~> 5.0"
   gem "webmock", "~> 3.7"
 end

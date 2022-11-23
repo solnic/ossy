@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
+require "dry/system"
 require "dry/system/container"
-require "dry/system/components"
+require "dry/system/provider_sources"
 
 require "ossy/types"
 
@@ -12,15 +13,18 @@ module Ossy
     configure do |config|
       config.root = Pathname(__dir__).join("../../")
       config.name = :ossy
-      config.default_namespace = "ossy"
+
+      config.component_dirs.add "lib" do |dir|
+        dir.namespaces.add "ossy", key: nil
+      end
     end
 
-    load_paths! "lib"
+    add_to_load_path! "lib"
 
-    boot(:settings, from: :system) do
+    register_provider(:settings, from: :dry_system) do
       settings do
-        key :github_login, Types::String.constrained(filled: true)
-        key :github_token, Types::String.constrained(filled: true)
+        setting :github_login, constructor: Types::String.constrained(filled: true)
+        setting :github_token, constructor: Types::String.constrained(filled: true)
       end
     end
   end

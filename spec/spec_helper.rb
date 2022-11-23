@@ -3,7 +3,7 @@
 require "bundler/setup"
 require "byebug"
 
-require "ossy/container"
+require "ossy"
 
 # Ossy::Container.finalize!(freeze: false)
 

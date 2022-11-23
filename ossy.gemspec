@@ -26,6 +26,7 @@ Gem::Specification.new do |spec|
   spec.executables   = "ossy"
   spec.require_paths = ["lib"]
 
+  spec.add_runtime_dependency "dotenv", "~> 2.8"
   spec.add_runtime_dependency "dry-core", "~> 1.0"
   spec.add_runtime_dependency "dry-cli", "~> 1.0"
   spec.add_runtime_dependency "dry-inflector", "~> 1.0"

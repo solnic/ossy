@@ -34,7 +34,7 @@ module Ossy
         def call(source_path:, target_path:, data_file:)
           puts "Compiling #{source_path} => #{target_path}"
 
-          data = YAML.load_file(data_file)
+          data = YAML.load_file(data_file, permitted_classes: [Date])
           template = Tilt.new(source_path)
           output = template.render(Context.new(data))
 

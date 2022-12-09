@@ -20,7 +20,7 @@ module Ossy
 
         def call(config_path:, message:)
           attrs = YAML.safe_load(message)
-          target = YAML.load_file(config_path)
+          target = YAML.load_file(config_path, permitted_classes: [Date])
 
           version = attrs["version"] || target[0]["version"]
           entry = target.detect { |e| e["version"].eql?(version) } || {}

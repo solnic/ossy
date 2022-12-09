@@ -35,7 +35,7 @@ RSpec.describe Ossy::CLI::Changelogs::Update, "#call" do
     it "adds new entries" do
       command.(**options)
 
-      output = YAML.load_file(config_path)
+      output = YAML.load_file(config_path, permitted_classes: [Date])
 
       expect(output[0]["fixed"].last).to eql("This is a fix")
       expect(output[0]["added"].last).to eql("This is an addition")
@@ -58,7 +58,7 @@ RSpec.describe Ossy::CLI::Changelogs::Update, "#call" do
     it "adds new entries" do
       command.(**options)
 
-      output = YAML.load_file(config_path)
+      output = YAML.load_file(config_path, permitted_classes: [Date])
 
       expect(output[0]["fixed"].last).to eql("This is a fix")
       expect(output[0]["added"].last).to eql("This is an addition")
@@ -79,7 +79,7 @@ RSpec.describe Ossy::CLI::Changelogs::Update, "#call" do
     it "adds new entries" do
       command.(**options)
 
-      output = YAML.load_file(config_path)
+      output = YAML.load_file(config_path, permitted_classes: [Date])
 
       expect(output[1]["version"]).to eql("0.1.0")
       expect(output[1]["fixed"].last).to eql("This is a fix")
@@ -100,7 +100,7 @@ RSpec.describe Ossy::CLI::Changelogs::Update, "#call" do
     it "adds new entries" do
       command.(**options)
 
-      output = YAML.load_file(config_path)
+      output = YAML.load_file(config_path, permitted_classes: [Date])
 
       expect(output[0].keys).to eql(Ossy::CLI::Changelogs::Update::KEYS)
 
@@ -113,7 +113,7 @@ RSpec.describe Ossy::CLI::Changelogs::Update, "#call" do
       command.(**options)
       command.(**options)
 
-      output = YAML.load_file(config_path)
+      output = YAML.load_file(config_path, permitted_classes: [Date])
 
       expect(output.size).to be(4)
 

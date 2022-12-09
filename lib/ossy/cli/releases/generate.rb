@@ -42,14 +42,14 @@ module Ossy
         def call(config_path:, output_path:, template_path:, data_path: nil)
           puts "Generating #{output_path} from #{config_path} using #{template_path}"
 
-          ctx_data = YAML.load_file(config_path)
+          ctx_data = YAML.load_file(config_path, permitted_classes: [Date])
           template = Tilt.new(template_path)
 
           context = Context.new(ctx_data)
 
           if data_path
             key = File.basename(data_path).gsub(".yml", "")
-            data = YAML.load_file(data_path)
+            data = YAML.load_file(data_path, permitted_classes: [Date])
 
             context.update(key => OpenStruct.new(data))
           end

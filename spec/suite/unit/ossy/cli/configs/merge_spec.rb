@@ -29,7 +29,7 @@ RSpec.describe Ossy::CLI::Configs::Merge, "#call" do
   it "merges two yaml configs into a new one" do
     command.(**options)
 
-    output = YAML.load_file(output_path)
+    output = YAML.load_file(output_path, permitted_classes: [Date])
 
     expect(output).to eql(
       "test" => {

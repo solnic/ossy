@@ -23,8 +23,8 @@ module Ossy
 
           identifiers = opts[:identifiers].split(",").map { |s| s.split(":") }.to_h
 
-          source = YAML.load_file(source_path)
-          target = YAML.load_file(target_path)
+          source = YAML.load_file(source_path, permitted_classes: [Date])
+          target = YAML.load_file(target_path, permitted_classes: [Date])
 
           output = deep_merge(source, target, identifiers)
 
